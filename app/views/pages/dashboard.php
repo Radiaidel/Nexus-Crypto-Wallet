@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,30 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        .crypto-table {
-            min-width: 600px;
-        }
-
-        .top-gainers {
-            background-color: #FFD700;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-        }
-
-        .top-gainers-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .top-gainer-item {
-            list-style-type: none;
-            margin-bottom: 0.5rem;
-        }
-    </style>
-    <title>Crypto App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
 </head>
 
 <body class="bg-gray-200">
@@ -42,31 +20,23 @@
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                 </a>
                 <div class="flex items-center lg:order-2 space-x-5">
-                    <button> <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <button id="openwallet"> <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                             <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
 
                             <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M19 12C19 12.5523 18.5523 13 18 13C17.4477 13 17 12.5523 17 12C17 11.4477 17.4477 11 18 11C18.5523 11 19 11.4477 19 12Z"
-                                    fill="#000000" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9.94358 3.25H13.0564C14.8942 3.24998 16.3498 3.24997 17.489 3.40314C18.6614 3.56076 19.6104 3.89288 20.3588 4.64124C21.2831 5.56563 21.5777 6.80363 21.6847 8.41008C22.2619 8.6641 22.6978 9.2013 22.7458 9.88179C22.7501 9.94199 22.75 10.0069 22.75 10.067C22.75 10.0725 22.75 10.0779 22.75 10.0833V13.9167C22.75 13.9221 22.75 13.9275 22.75 13.933C22.75 13.9931 22.7501 14.058 22.7458 14.1182C22.6978 14.7987 22.2619 15.3359 21.6847 15.5899C21.5777 17.1964 21.2831 18.4344 20.3588 19.3588C19.6104 20.1071 18.6614 20.4392 17.489 20.5969C16.3498 20.75 14.8942 20.75 13.0564 20.75H9.94359C8.10583 20.75 6.65019 20.75 5.51098 20.5969C4.33856 20.4392 3.38961 20.1071 2.64124 19.3588C1.89288 18.6104 1.56076 17.6614 1.40314 16.489C1.24997 15.3498 1.24998 13.8942 1.25 12.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33856 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40314C6.65019 3.24997 8.10582 3.24998 9.94358 3.25ZM20.1679 15.75H18.2308C16.0856 15.75 14.25 14.1224 14.25 12C14.25 9.87756 16.0856 8.25 18.2308 8.25H20.1679C20.0541 6.90855 19.7966 6.20043 19.2981 5.7019C18.8749 5.27869 18.2952 5.02502 17.2892 4.88976C16.2615 4.75159 14.9068 4.75 13 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976C4.70476 5.02502 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02502 6.70476 2.88976 7.71085C2.75159 8.73851 2.75 10.0932 2.75 12C2.75 13.9068 2.75159 15.2615 2.88976 16.2892C3.02502 17.2952 3.27869 17.8749 3.7019 18.2981C4.12511 18.7213 4.70476 18.975 5.71085 19.1102C6.73851 19.2484 8.09318 19.25 10 19.25H13C14.9068 19.25 16.2615 19.2484 17.2892 19.1102C18.2952 18.975 18.8749 18.7213 19.2981 18.2981C19.7966 17.7996 20.0541 17.0915 20.1679 15.75ZM5.25 8C5.25 7.58579 5.58579 7.25 6 7.25H10C10.4142 7.25 10.75 7.58579 10.75 8C10.75 8.41421 10.4142 8.75 10 8.75H6C5.58579 8.75 5.25 8.41421 5.25 8ZM20.9235 9.75023C20.9032 9.75001 20.8766 9.75 20.8333 9.75H18.2308C16.8074 9.75 15.75 10.8087 15.75 12C15.75 13.1913 16.8074 14.25 18.2308 14.25H20.8333C20.8766 14.25 20.9032 14.25 20.9235 14.2498C20.936 14.2496 20.9426 14.2495 20.9457 14.2493L20.9479 14.2492C21.1541 14.2367 21.2427 14.0976 21.2495 14.0139C21.2495 14.0139 21.2497 14.0076 21.2498 13.9986C21.25 13.9808 21.25 13.9572 21.25 13.9167V10.0833C21.25 10.0428 21.25 10.0192 21.2498 10.0014C21.2497 9.99238 21.2495 9.98609 21.2495 9.98609C21.2427 9.90242 21.1541 9.7633 20.9479 9.75076C20.9479 9.75076 20.943 9.75043 20.9235 9.75023Z"
-                                    fill="#000000" />
+                                <path d="M19 12C19 12.5523 18.5523 13 18 13C17.4477 13 17 12.5523 17 12C17 11.4477 17.4477 11 18 11C18.5523 11 19 11.4477 19 12Z" fill="#000000" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94358 3.25H13.0564C14.8942 3.24998 16.3498 3.24997 17.489 3.40314C18.6614 3.56076 19.6104 3.89288 20.3588 4.64124C21.2831 5.56563 21.5777 6.80363 21.6847 8.41008C22.2619 8.6641 22.6978 9.2013 22.7458 9.88179C22.7501 9.94199 22.75 10.0069 22.75 10.067C22.75 10.0725 22.75 10.0779 22.75 10.0833V13.9167C22.75 13.9221 22.75 13.9275 22.75 13.933C22.75 13.9931 22.7501 14.058 22.7458 14.1182C22.6978 14.7987 22.2619 15.3359 21.6847 15.5899C21.5777 17.1964 21.2831 18.4344 20.3588 19.3588C19.6104 20.1071 18.6614 20.4392 17.489 20.5969C16.3498 20.75 14.8942 20.75 13.0564 20.75H9.94359C8.10583 20.75 6.65019 20.75 5.51098 20.5969C4.33856 20.4392 3.38961 20.1071 2.64124 19.3588C1.89288 18.6104 1.56076 17.6614 1.40314 16.489C1.24997 15.3498 1.24998 13.8942 1.25 12.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33856 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40314C6.65019 3.24997 8.10582 3.24998 9.94358 3.25ZM20.1679 15.75H18.2308C16.0856 15.75 14.25 14.1224 14.25 12C14.25 9.87756 16.0856 8.25 18.2308 8.25H20.1679C20.0541 6.90855 19.7966 6.20043 19.2981 5.7019C18.8749 5.27869 18.2952 5.02502 17.2892 4.88976C16.2615 4.75159 14.9068 4.75 13 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976C4.70476 5.02502 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02502 6.70476 2.88976 7.71085C2.75159 8.73851 2.75 10.0932 2.75 12C2.75 13.9068 2.75159 15.2615 2.88976 16.2892C3.02502 17.2952 3.27869 17.8749 3.7019 18.2981C4.12511 18.7213 4.70476 18.975 5.71085 19.1102C6.73851 19.2484 8.09318 19.25 10 19.25H13C14.9068 19.25 16.2615 19.2484 17.2892 19.1102C18.2952 18.975 18.8749 18.7213 19.2981 18.2981C19.7966 17.7996 20.0541 17.0915 20.1679 15.75ZM5.25 8C5.25 7.58579 5.58579 7.25 6 7.25H10C10.4142 7.25 10.75 7.58579 10.75 8C10.75 8.41421 10.4142 8.75 10 8.75H6C5.58579 8.75 5.25 8.41421 5.25 8ZM20.9235 9.75023C20.9032 9.75001 20.8766 9.75 20.8333 9.75H18.2308C16.8074 9.75 15.75 10.8087 15.75 12C15.75 13.1913 16.8074 14.25 18.2308 14.25H20.8333C20.8766 14.25 20.9032 14.25 20.9235 14.2498C20.936 14.2496 20.9426 14.2495 20.9457 14.2493L20.9479 14.2492C21.1541 14.2367 21.2427 14.0976 21.2495 14.0139C21.2495 14.0139 21.2497 14.0076 21.2498 13.9986C21.25 13.9808 21.25 13.9572 21.25 13.9167V10.0833C21.25 10.0428 21.25 10.0192 21.2498 10.0014C21.2497 9.99238 21.2495 9.98609 21.2495 9.98609C21.2427 9.90242 21.1541 9.7633 20.9479 9.75076C20.9479 9.75076 20.943 9.75043 20.9235 9.75023Z" fill="#000000" />
                             </g>
 
                         </svg></button> <button>
-                        <svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 611.999 611.999" xml:space="preserve">
+                        <svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
                             <g>
                                 <g>
                                     <g>
-                                        <path
-                                            d="M570.107,500.254c-65.037-29.371-67.511-155.441-67.559-158.622v-84.578c0-81.402-49.742-151.399-120.427-181.203
+                                        <path d="M570.107,500.254c-65.037-29.371-67.511-155.441-67.559-158.622v-84.578c0-81.402-49.742-151.399-120.427-181.203
                                                 C381.969,34,347.883,0,306.001,0c-41.883,0-75.968,34.002-76.121,75.849c-70.682,29.804-120.425,99.801-120.425,181.203v84.578
                                                 c-0.046,3.181-2.522,129.251-67.561,158.622c-7.409,3.347-11.481,11.412-9.768,19.36c1.711,7.949,8.74,13.626,16.871,13.626
                                                 h164.88c3.38,18.594,12.172,35.892,25.619,49.903c17.86,18.608,41.479,28.856,66.502,28.856
@@ -90,109 +60,153 @@
             </div>
         </nav>
     </header>
-    <div class="container mx-auto flex flex-col sm:flex-row-reverse px-4 sm:px-12 mt-10">
-        <!-- Right Section: Card -->
-        <div class="w-full sm:w-1/3">
-            <div class="p-5 rounded-lg top-gainers">
-                <h2 class="text-2xl font-bold mb-5 top-gainers-title">Top Gainers</h2>
-                <ul id="topGainersList">
-                    <!-- Data will be populated using JavaScript -->
-                </ul>
-            </div>
-        </div>
+    <section class="container px-4 mx-auto">
+        <h2 class="text-lg font-medium text-gray-800 dark:text-white">Crypto</h2>
 
-        <!-- Left Section: Table -->
-        <div class="w-full sm:w-2/3 mb-8 sm:mr-5">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table id="cryptoTableBody"
-                    class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 crypto-table">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-6 py-3">
-                                Symbol
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Name
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Price
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Change (%)
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Market Cap
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Volume 24H
-                            </th>
-                            <th scope="col" class="px-6 py-3"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Data will be populated using JavaScript -->
-                    </tbody>
-                </table>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, quibusdam.</p>
+
+        <div class="flex flex-col mt-6">
+            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
+
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead class="bg-gray-50 dark:bg-gray-800">
+                            <tr class="text-center">
+                    <th class="text-left">Symbol</th>
+                    <th class="text-left">Rank</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Market Cap</th>
+                    <th class="text-center">Volume (24h)</th>
+                    <th class="text-left">Circulating Supply</th>
+                    <th class="text-left">Actions</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                            </thead>
+                            <tbody id="cryptoinfo" class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <aside id="wallet" class="flex flex-col w-[70%] h-screen fixed top-0 left-[-100%] px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+   <div class="w-[95%] "><button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button></div>
+    <a href="#" class="mx-auto">
+        <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
+    </a>
+
+    <div class="flex justify-between flex-1">
+        <nav class="flex justify-around items-center w-[100%]">
+                <div class="flex items-center bg-red-300 px-2 py-2 rounded-xl ">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <button class="mx-4 font-medium">Wallet</button>
+                </div>
+                <div class="flex items-center bg-green-300 px-2 py-2 rounded-xl">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <button class="mx-4 font-medium">Stats</button>
+                <div>
+        </nav>
     </div>
 
-    <script>
-        // Simulated data for illustration
-        const cryptoData = [
-            { symbol: 'BTC', name: 'Bitcoin', price: '$45,509.04', change: '+6.58%', marketCap: '$31.10B', volume24h: '$891.40B' },
-            { symbol: 'ETH', name: 'Ethereum', price: '$2,394.32', change: '+3.88%', marketCap: '$10.32B', volume24h: '$287.76B' },
-            // Add more data as needed
-        ];
+    <div class="flex justify-between flex-1">
+        
+    </div>
+</aside>
 
-        const topGainersData = [
-            { symbol: 'SOL', name: 'Solana', change: '+7.91%' },
-            { symbol: 'BTC', name: 'Bitcoin', change: '+6.58%' },
-            // Add more data as needed
-        ];
-
-        // Function to populate the left section (table)
-        function populateCryptoTable() {
-            const tableBody = document.querySelector('#cryptoTableBody tbody');
-
-            cryptoData.forEach(crypto => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${crypto.symbol}</td>
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${crypto.name}</td>
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${crypto.price}</td>
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${crypto.change}</td>
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${crypto.marketCap}</td>
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${crypto.volume24h}</td>
-                    <td scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Buy</td>
-                `;
-                tableBody.appendChild(row);
-            });
-        }
-
-        // Function to populate the right section (top gainer card)
-        function populateTopGainersList() {
-            const topGainersList = document.getElementById('topGainersList');
-
-            topGainersData.forEach(gainer => {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${gainer.name} (${gainer.symbol}) - Change: ${gainer.change}`;
-                topGainersList.appendChild(listItem);
-            });
-        }
-
-        // Call the functions to populate the sections
-        populateCryptoTable();
-        populateTopGainersList();
-    </script>
 
 </body>
 
 </html>
+
+<script>
+    let cryptoinfo = document.getElementById('cryptoinfo');
+    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+            }
+        })
+        .then((data) => {
+            return data.json()
+        })
+        .then((parseddata) => {
+            console.log(parseddata);
+            for (let i = 0; i < parseddata.data.length; i++) {
+                cryptoinfo.innerHTML += `
+                <tr>
+                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                        <div>
+                                            <h2 class="font-medium text-gray-800 dark:text-white ">${parseddata.data[i].symbol}</h2>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <span class=" w-[100%] bg-green-200"><h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].cmc_rank}</h4></span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-blue-500"> ${parseddata.data[i].name}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">$${parseddata.data[i].quote.USD.price}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.market_cap}</h4>
+                                        </div>
+                                    </td>
+
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.volume_24h}</h4>
+                                        </div>
+                                    </td>
+
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].circulating_supply}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <button class="bg-green-500 text-white px-2 py-1 rounded-md buycrypto">Buy</button>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div class='flex items-center'>
+                                            <button class="bg-green-500 text-center text-white px-2 py-1 rounded-md addwatch">Add to Watchlist</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                `;
+            }
+        });
+
+        let closewallet = document.getElementById('closewallet');
+        let wallet = document.getElementById('wallet');
+        let openwallet = document.getElementById('openwallet');
+        closewallet.addEventListener('click' , e=>{
+            wallet.style.transition = 'left 0.5s ease';
+            wallet.style.left = '-100%';
+        })
+        openwallet.addEventListener('click' , e=>{
+            wallet.style.transition = 'left 0.5s ease';
+            wallet.style.left = '-1%';
+        })
+</script>
