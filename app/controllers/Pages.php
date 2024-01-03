@@ -13,12 +13,12 @@ class Pages extends Controller
         ];
         $this->view('pages/index', $data);
     }
-    public function anotherPage()
+    public function dash()
     {
         $data = [
-            'title' => 'dash',
+            'title' => 'dashboard',
             'description' => ''
         ];
-        $this->view('pages/dash', $data);
+        $this->view('pages/dashboard', $data);
     }
 }
