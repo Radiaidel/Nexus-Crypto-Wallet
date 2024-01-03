@@ -10,21 +10,22 @@
         .bg-color {
             background-color: #181a20;
         }
+
         .shadow-md-gray {
-        box-shadow: 0 4px 6px -1px rgba(169, 169, 169, 0.1), 0 2px 4px -1px rgba(169, 169, 169, 0.06);
-    }
+            box-shadow: 0 4px 6px -1px rgba(169, 169, 169, 0.1), 0 2px 4px -1px rgba(169, 169, 169, 0.06);
+        }
     </style>
 </head>
 
 <body class="bg-color">
     <!-- Header Section -->
     <header class="p-4 text-yellow-300 shadow-md-gray">
-    <div class="container mx-auto flex justify-between items-center">
-        <div>
-            
-            <h1 class="text-xl ">Nexus Crypto Wallet</h1>
-        </div>
-        <div class="flex items-center space-x-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+
+                <h1 class="text-xl ">Nexus Crypto Wallet</h1>
+            </div>
+            <div class="flex items-center space-x-4">
                 <a href="#">
                     <svg width="25px" height="25px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1"
                         xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +43,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#">
+                <button href="#" id="openwallet">
                     <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20 15C20.5523 15 21 14.5523 21 14C21 13.4477 20.5523 13 20 13C19.4477 13 19 13.4477 19 14C19 14.5523 19.4477 15 20 15Z"
@@ -51,7 +52,7 @@
                             d="M16.775 0.985398C18.4919 0.460783 20.2821 1.55148 20.6033 3.3178L20.9362 5.14896C22.1346 5.54225 23 6.67006 23 8V10.7639C23.6137 11.3132 24 12.1115 24 13V15C24 15.8885 23.6137 16.6868 23 17.2361V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V8C1 6.51309 2.08174 5.27884 3.50118 5.04128L16.775 0.985398ZM21 16C21.5523 16 22 15.5523 22 15V13C22 12.4477 21.5523 12 21 12H18C17.4477 12 17 12.4477 17 13V15C17 15.5523 17.4477 16 18 16H21ZM21 18V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V8C3 7.44772 3.44772 7 4 7H20C20.55 7 20.9962 7.44396 21 7.99303L21 10H18C16.3431 10 15 11.3431 15 13V15C15 16.6569 16.3431 18 18 18H21ZM18.6954 3.60705L18.9412 5H10L17.4232 2.82301C17.9965 2.65104 18.5914 3.01769 18.6954 3.60705Z"
                             fill="#fff" />
                     </svg>
-                </a>
+                </button>
 
                 <!-- Wallet Icon -->
                 <a href="#">
@@ -108,54 +109,117 @@
 
     <!-- Crypto Table Section -->
     <div class="container mx-auto p-4 text-gray-300 overflow-x-auto">
-    <table class="table-auto border border-gray-500 w-full">
-        <!-- Table Header -->
-        <thead class="border  p-4 border-gray-500">
-            <tr class="text-center bg-gray-800 text-white">
-                <th></th>
-                <th class="text-left">Rank</th>
-                <th class="text-left">Name</th>
-                <th class="text-left">Price</th>
-                <th class="text-left">Market Cap</th>
-                <th class="text-left">Volume (24h)</th>
-                <th class="text-left">Circulating Supply</th>
-                <th class="text-left">Actions</th>
-            </tr>
-        </thead>
-        <!-- Table Body (Sample Data) -->
-        <tbody>
-            <tr class="cursor-pointer p-2 border-t border-gray-400">
-                <td class="text-center"><span class="text-yellow-500 text-xl">&#9733;</span></td>
-                <td class="text-left">1</td>
-                <td class="text-left">
-                    <div class="flex items-center">
-                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC logo"
-                            class="w-6 h-6 rounded-full mr-2">
-                        <div>
-                            <p class="font-medium text-gray-300">Bitcoin</p>
-                            <p class="text-gray-300 text-xs">BTC</p>
-                        </div>
-                    </div>
-                </td>
-                <td class="text-left"><a href="/fr/currencies/bitcoin/#markets" class="text-blue-500">€41,052.67</a>
-                </td>
-                <td class="text-left">€804.13B</td>
-                <td class="text-left"><a href="/fr/currencies/bitcoin/#markets"
-                        class="text-blue-500">€36,122,122,199</a></td>
-                <td class="text-left">
-                    <p>19,587,818 BTC</p>
-                </td>
-                <td class="text-left">
-                    <button class="bg-green-500 text-white px-2 py-1 rounded-md">Buy</button>
-                </td>
-            </tr>
-            <!-- Add more rows with crypto data as needed -->
-        </tbody>
-    </table>
-</div>
+        <table class="table-auto border border-gray-500 w-full">
+            <!-- Table Header -->
+            <thead class="border  p-4 border-gray-500">
+                <tr class="text-center bg-gray-800 text-white">
+                    <th></th>
+                    <th class="text-left">Rank</th>
+                    <th class="text-left">Name</th>
+                    <th class="text-left">Price</th>
+                    <th class="text-left">Market Cap</th>
+                    <th class="text-left">Volume (24h)</th>
+                    <th class="text-left">Circulating Supply</th>
+                    <th class="text-left">Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body (Sample Data) -->
+            <tbody id="cryptoinfo">
 
+            </tbody>
+        </table>
+    </div>
+
+    <aside id="wallet" class="flex flex-col w-[70%] h-screen fixed top-0 left-[-100%] px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+        <div class="w-[95%] "><button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512">
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg></button></div>
+        <a href="#" class="mx-auto">
+            <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
+        </a>
+
+        <div class="flex justify-between flex-1">
+            <nav class="flex justify-around items-center w-[100%]">
+                <div class="flex items-center bg-red-300 px-2 py-2 rounded-xl ">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <button class="mx-4 font-medium">Wallet</button>
+                </div>
+                <div class="flex items-center bg-green-300 px-2 py-2 rounded-xl">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <button class="mx-4 font-medium">Stats</button>
+                    <div>
+            </nav>
+        </div>
+
+        <div class="flex justify-between flex-1">
+
+        </div>
+    </aside>
 
 
 </body>
 
 </html>
+
+<script>
+    let cryptoinfo = document.getElementById('cryptoinfo');
+    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+        }
+    })
+        .then((data) => {
+            return data.json()
+        })
+        .then((parseddata) => {
+            console.log(parseddata);
+            for (let i = 0; i < parseddata.data.length; i++) {
+                cryptoinfo.innerHTML += `
+                <tr class="cursor-pointer p-2 border-t border-gray-400">
+                <td class="text-center"><span class="text-yellow-500 text-xl">&#9733;</span></td>
+                <td class="text-left">${parseddata.data[i].cmc_rank}</td>
+                <td class="text-left">
+                    <div class="flex items-center">
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC logo"
+                            class="w-6 h-6 rounded-full mr-2">
+                        <div>
+                            <p class="font-medium text-gray-300">${parseddata.data[i].name}</p>
+                            <p class="text-gray-300 text-xs">${parseddata.data[i].symbol}</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-left"><a href="/fr/currencies/bitcoin/#markets" class="text-blue-500">$${parseddata.data[i].quote.USD.price}</a>
+                </td>
+                <td class="text-left">${parseddata.data[i].quote.USD.market_cap}</td>
+                <td class="text-left"><a href="/fr/currencies/bitcoin/#markets"
+                        class="text-blue-500">${parseddata.data[i].quote.USD.volume_24h}</a></td>
+                <td class="text-left">
+                    <p>${parseddata.data[i].circulating_supply}</p>
+                </td>
+                <td class="text-left">
+                    <button class="bg-green-500 text-white px-2 py-1 rounded-md">Buy</button>
+                </td>
+                </tr>
+                `;
+            }
+        });
+
+    let closewallet = document.getElementById('closewallet');
+    let wallet = document.getElementById('wallet');
+    let openwallet = document.getElementById('openwallet');
+    closewallet.addEventListener('click', e => {
+        wallet.style.transition = 'left 0.5s ease';
+        wallet.style.left = '-100%';
+    })
+    openwallet.addEventListener('click', e => {
+        wallet.style.transition = 'left 0.5s ease';
+        wallet.style.left = '-1%';
+    })
+</script>
