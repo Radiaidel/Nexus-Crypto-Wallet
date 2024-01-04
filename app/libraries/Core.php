@@ -1,8 +1,12 @@
 <?php
-class Core
-{
-    protected $currentController = 'Pages';
-    protected $currentMethod = 'index';
+  /*
+   * App Core Class
+   * Creates URL & loads core controller
+   * URL FORMAT - /controller/method/params
+   */
+  class Core {
+    protected $currentController = 'users';
+    protected $currentMethod = 'register';
     protected $params = [];
 
 
