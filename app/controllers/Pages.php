@@ -1,24 +1,24 @@
 <?php
-  class Pages extends Controller {
-    public function __construct(){
-     
+class Pages extends Controller
+{
+    private $userModel;
+    public function __construct()
+    {
     }
-    
-    public function index(){
-      $data = [
-        'title' => 'SharePosts',
-        'description' => 'Simple social network built on the TraversyMVC PHP framework'
-      ];
-     
-      $this->view('pages/index', $data);
+    public function index()
+    {
+        $data = [
+            'title' => 'index',
+            'description' => ''
+        ];
+        $this->view('pages/index', $data);
     }
-
-    public function about(){
-      $data = [
-        'title' => 'About Us',
-        'description' => 'App to share posts with other users'
-      ];
-
-      $this->view('pages/about', $data);
+    public function dash()
+    {
+        $data = [
+            'title' => 'dashboard',
+            'description' => ''
+        ];
+        $this->view('pages/dashboard', $data);
     }
-  }
+}
