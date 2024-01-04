@@ -13,7 +13,7 @@ class Users extends Controller {
             // Process form
     
             // Sanitize POST data
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
     
             $data = [
                 'FirstName' => trim($_POST['FirstName']),
@@ -99,7 +99,7 @@ class Users extends Controller {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
           // Process form
           // Sanitize POST data
-          $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+          $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
           
           // Init data
           $data =[
