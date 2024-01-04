@@ -11,4 +11,5 @@ class Controller{
             die('page does not exist');
         }
     }
+    
 }

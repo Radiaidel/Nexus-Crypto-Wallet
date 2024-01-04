@@ -5,58 +5,5 @@ define('DB_PASS', '') ;
 define('DB_NAME', 'nexus_crypto_db') ;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 define('APPROOT', dirname(dirname(__FILE__))) ;
-define('URLROOT', 'http://localhost/jiarware/') ;
+define('URLROOT', 'http://localhost/Nexus-Crypto-Wallet/') ;
