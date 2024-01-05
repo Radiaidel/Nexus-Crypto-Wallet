@@ -168,10 +168,10 @@ class Users extends Controller {
                 $this->createUserSession($user);
 
                 flash('verify_success', 'Your email has been verified. Welcome!');
-                redirect('pages/dashboard'); // Redirect to the dashboard or any other page
+                redirect('pages/dash'); // Redirect to the dashboard or any other page
             } else {
                 flash('verify_error', 'Invalid verification code. Please try again.');
-                $this->view('users/verify'); // Reload the verification page with an error message
+                $this->view('users/verify',null); // Reload the verification page with an error message
             }
         } else {
             // Redirect to the login page if accessed directly without a POST request
@@ -180,7 +180,7 @@ class Users extends Controller {
     }
     public function createUserSession($user)
     {
-        $_SESSION['id'] = $user->id;
+        $_SESSION['id'] = $user['UserID'];
         $_SESSION['Email'] = $user->Email;
         $_SESSION['FirstName'] = $user->FirstName;
         $_SESSION['LastName'] = $user->LastName;

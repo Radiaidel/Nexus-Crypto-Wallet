@@ -21,22 +21,21 @@ class TransactionController extends Controller
             $resultat = $this->User->findUserByNexusId($nexusID);
 
             if ($resultat) {
-                session_start();
                 $_SESSION["UserIDRecipient"] = $resultat['UserID'];
-                $_SESSION["ValidNexusID"] = true; // Flag indicating a valid NexusID
+                $_SESSION["ValidNexusID"] = true;
 
-                // Redirect to the transfer page
-                header('Location: ' . URLROOT . 'TransactionController/transferPage');
+                header('Location: ' . URLROOT . '/TransactionController/transferPage');
                 exit();
             } else {
-                var_dump($resultat);
-                die("utilisateur non trouvé");
+                echo '<script>
+                    alert("Utilisateur non trouvé.");
+                    window.location.href = "' . URLROOT . '/Pages/dash";
+                </script>';
             }
         }
     }
     public function transferPage()
     {
-        session_start();
 
         $validNexusID = isset($_SESSION["ValidNexusID"]) && $_SESSION["ValidNexusID"];
         if ($validNexusID):
@@ -45,7 +44,7 @@ class TransactionController extends Controller
             $wallet = $this->model('Wallet');
 
 
-            $cryptoData = $wallet->getCryptoDataForUser(2);
+            $cryptoData = $wallet->getCryptoDataForUser($_SESSION['id']);
 
 
             echo ' <script>
@@ -58,9 +57,12 @@ class TransactionController extends Controller
                 </script>';
 
             if (isset($cryptoData)) {
-                $this->view('pages/transfer', ['cryptoData' => $cryptoData, 'validNexusID' => $validNexusID]);
+                $this->view('pages/dashboard', ['cryptoData' => $cryptoData, 'validNexusID' => $validNexusID]);
             } else {
-                die("Erreur lors de la récupération des données de crypto-monnaie pour l'utilisateur.");
+                echo '<script>
+                alert("Erreur lors de la récupération des données de crypto-monnaie pour l\'utilisateur.");
+                window.location.href = "' . URLROOT . '/Pages/dash";
+            </script>';
             }
         endif;
 
@@ -68,11 +70,10 @@ class TransactionController extends Controller
     }
     public function sendCryptocurrency()
     {
-        session_start();
 
 
         if (isset($_POST['transferBtn'])) {
-            $userIDSender = 2; // Remplacez par le véritable ID de l'utilisateur émetteur
+            $userIDSender = $_SESSION['id']; // sessiiiiiiiiiiionnnnnnnnn idddddddddddddddd
             $userIDRecipient = $_SESSION['UserIDRecipient'];
             $cryptoID = $_POST['cryptoType'];
             $type = 'Transfert';
@@ -96,21 +97,20 @@ class TransactionController extends Controller
                 $this->Notification->NewNotification($userIDRecipient, $message, $notificationDate);
 
 
-
                 echo '<script>
                     alert("La transaction a été enregistrée avec succès dans la base de données.");
-                    window.location.href = "' . URLROOT . 'Pages/transfer";
+                    window.location.href = "' . URLROOT . '/Pages/dash";
                 </script>';
             } else {
                 echo '<script>
                     alert("Erreur lors de l\'enregistrement de la transaction dans la base de données.");
-                    window.location.href = "' . URLROOT . 'Pages/transfer";
+                    window.location.href = "' . URLROOT . '/Pages/dash";
                 </script>';
             }
         } else {
             echo '<script>
                 alert("Confirmation non reçue.");
-                window.location.href = "' . URLROOT . 'Pages/transfer";
+                window.location.href = "' . URLROOT . '/Pages/dash";
             </script>';
         }
         exit();
