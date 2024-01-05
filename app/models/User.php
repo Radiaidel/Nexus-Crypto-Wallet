@@ -154,4 +154,8 @@ class User {
     //     $this->db->bind(':userId', $userId);
     //     $this->db->execute();
     // }
+
+        // public function buycrypto(){
+    //     $this->db->query("INSERT INTO wallet_elements()")
+    // }
 }
