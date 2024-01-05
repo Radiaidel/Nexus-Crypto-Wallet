@@ -21,4 +21,12 @@ class Pages extends Controller
         ];
         $this->view('pages/dashboard', $data);
     }
+    public function transfer()
+    {
+        $data = [
+            'title' => 'dashboard',
+            'description' => ''
+        ];
+        $this->view('pages/transfer', $data);
+    }
 }
