@@ -5,7 +5,7 @@ require_once 'app/controllers/Users.php'; // Assurez-vous que le chemin est corr
 require_once 'app/controllers/Pages.php'; // Assurez-vous que le chemin est correct
 
 // Créer une instance du routeur
-$router = new Router();
+$router = new Router(); 
 
 // Définir les routes
 $router->get('/', 'Pages@index');
