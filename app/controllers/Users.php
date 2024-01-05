@@ -168,7 +168,7 @@ class Users extends Controller {
                 $this->createUserSession($user);
 
                 flash('verify_success', 'Your email has been verified. Welcome!');
-                redirect('pages/dashboard'); // Redirect to the dashboard or any other page
+                redirect('pages/dash'); // Redirect to the dashboard or any other page
             } else {
                 flash('verify_error', 'Invalid verification code. Please try again.');
                 $this->view('users/verify'); // Reload the verification page with an error message
