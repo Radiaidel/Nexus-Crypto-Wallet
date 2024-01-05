@@ -187,19 +187,19 @@
 
     <aside id="wallet"
         class="bg-white flex overflow-auto scrollbar-hide flex-col w-[80%] h-screen fixed top-0 left-[-100%]  bg-slate-800 z-10 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700 p-6">
-        <div class="w-[95%] bg-white  ">
-            <button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24"
-                    viewBox="0 0 384 512">
-                    <path
-                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                </svg></button>
-            <button id="showModelBtn"
-                class="absolute top-0 left-4 bg-yellow-500 text-white px-4 py-2 mt-4 mx-auto block rounded-md hover:bg-yellow-600 focus:outline-none">
-                Transfer
-            </button>
+            <div class="w-[95%] bg-white  ">
+                <button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24"
+                        viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg></button>
+                <button id="showModelBtn"
+                    class="absolute top-0 left-4 bg-yellow-500 text-white px-4 py-2 mt-4 mx-auto block rounded-md hover:bg-yellow-600 focus:outline-none">
+                    Transfer
+                </button>
 
 
-        </div>
+            </div>
 
         <section class="flex flex-col justify-center h-[50vh] w-[80%]bg-slate-800 text-gray-600 mt-8">
 
