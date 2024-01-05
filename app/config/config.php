@@ -59,4 +59,4 @@ define('DB_NAME', '') ;
 
 
 define('APPROOT', dirname(dirname(__FILE__))) ;
-define('URLROOT', 'http://localhost/jiarware/') ;
+define('URLROOT', 'http://localhost/Nexus-Crypto-Wallet/') ;
