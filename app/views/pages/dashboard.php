@@ -86,29 +86,46 @@
 
 
     <div id="Watchlist"
-        class="text-black fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        class="text-black fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden z-50 bg-black">
         <div class="bg-white p-6 rounded-lg shadow-lg w-96">
             <!-- Modal content -->
             <h2 class="text-lg font-semibold mb-4 text-yellow-300">Watchlist Crypto</h2>
             <table class="w-full mb-4">
                 <thead>
                     <tr>
-                        <th class="border-b border-gray-300 py-2 text-left">CryptoID</th>
                         <th class="border-b border-gray-300 py-2 text-left">Name</th>
                         <th class="border-b border-gray-300 py-2 text-left">Slug</th>
+                        <th class="border-b border-gray-300 py-2 text-left">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($data['watchlistData'] as $crypto): ?>
                         <tr>
                             <td class="border-b border-gray-300 py-2">
-                                <?php echo $crypto['CryptoID']; ?>
-                            </td>
-                            <td class="border-b border-gray-300 py-2">
                                 <?php echo $crypto['Name']; ?>
                             </td>
                             <td class="border-b border-gray-300 py-2">
                                 <?php echo $crypto['Slug']; ?>
+                            </td>
+                            <td class="border-b border-gray-300 py-2 text-center">
+                                <div class='flex items-center'>
+                                    <button class="addtofav">
+                                        <svg fill="#ffff00" width="20px" height="20px" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                            <g id="SVGRepo_iconCarrier">
+
+                                                <path
+                                                    d="M21.5,9.757l-5.278,4.354L17.871,21.5,12,17.278,6.129,21.5l1.649-7.389L2.5,9.757l6.333-.924L12,2.5l3.167,6.333Z" />
+
+                                            </g>
+
+                                        </svg> </button>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
