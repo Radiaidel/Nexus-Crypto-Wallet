@@ -29,23 +29,28 @@
             </div>
             <div class="flex items-center space-x-4">
                 <button id="mysolde">500</button>
-                <a href="#">
-                    <svg width="25px" height="25px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#000000"
-                            stroke-width="47.104">
-                            <path
-                                d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z"
-                                fill="#fff"></path>
-                        </g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z"
-                                fill="#fff"></path>
-                        </g>
-                    </svg>
-                </a>
+                <form id="watchlistForm" action="<?php echo URLROOT; ?>/WatchListController/displayWatchlist"
+                    method="POST">
+                    <button type="submit" id="openModalWatchList">
+                        <svg width="25px" height="25px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#000000" stroke-width="47.104">
+                                <path
+                                    d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z"
+                                    fill="#fff"></path>
+                            </g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z"
+                                    fill="#fff"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </form>
+
+
                 <div class="flex items-center lg:order-2 space-x-5">
                     <button id="openwallet"> <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -78,6 +83,52 @@
             </div>
         </div>
     </header>
+
+
+    <div id="Watchlist"
+        class="text-black fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <!-- Modal content -->
+            <h2 class="text-lg font-semibold mb-4 text-yellow-300">Watchlist Crypto</h2>
+            <table class="w-full mb-4">
+                <thead>
+                    <tr>
+                        <th class="border-b border-gray-300 py-2 text-left">CryptoID</th>
+                        <th class="border-b border-gray-300 py-2 text-left">Name</th>
+                        <th class="border-b border-gray-300 py-2 text-left">Slug</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($data['watchlistData'] as $crypto): ?>
+                        <tr>
+                            <td class="border-b border-gray-300 py-2">
+                                <?php echo $crypto['CryptoID']; ?>
+                            </td>
+                            <td class="border-b border-gray-300 py-2">
+                                <?php echo $crypto['Name']; ?>
+                            </td>
+                            <td class="border-b border-gray-300 py-2">
+                                <?php echo $crypto['Slug']; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <button id="closeModalBtn"
+                class="bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-300">
+                Fermer
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the watchlist modal
+        function DisplayWatchList() {
+            // You can add additional logic here if needed
+            document.getElementById("watchlistForm").submit();
+        }
+    </script>
+
 
 
     <nav class="bg-yellow-400 shadow dark:bg-gray-800 hidden" id="buypop">
@@ -366,7 +417,8 @@
         </div>
     </div>
 
-    <div id="otherInfoModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+    <div id="otherInfoModal"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
         <div class="max-w-md mx-auto p-6 bg-white rounded-md shadow-md w-3/5">
             <!-- Barre de fermeture en haut à droite -->
             <div class="flex justify-end">
@@ -380,7 +432,8 @@
             </div>
 
             <!-- Formulaire pour saisir d'autres informations -->
-            <form id="otherInfoForm" action="<?php echo URLROOT; ?>/TransactionController/sendCryptocurrency" method="POST">
+            <form id="otherInfoForm" action="<?php echo URLROOT; ?>/TransactionController/sendCryptocurrency"
+                method="POST">
                 <div class="mt-4">
                     <label for="cryptoType" class="block text-sm font-medium text-gray-600">Type de
                         Cryptomonnaie</label>
@@ -398,14 +451,14 @@
 
 
                     <label for="quantity" class="block mt-4 text-sm font-medium text-gray-600">Quantité</label>
-                    <input type="text" id="quantity" name="quantity"required
+                    <input type="text" id="quantity" name="quantity" required
                         class="mt-1 p-2 block w-full border-b-2 border-yellow-300 focus:outline-none focus:border-yellow-500 bg-gray-100 rounded-md">
                     <div id="quantityError" class="text-red-500"></div>
                 </div>
 
                 <!-- Bouton Envoyer en bas à droite -->
                 <div class="mt-8 flex justify-end">
-                    <button  type="submit" id="sendBtn" name="transferBtn" onclick="confirmTransfer()"
+                    <button type="submit" id="sendBtn" name="transferBtn" onclick="confirmTransfer()"
                         class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none">
                         Envoyer
                     </button>
@@ -496,7 +549,7 @@
             // Si l'utilisateur clique sur "Oui", soumettre le formulaire
             if (confirmation) {
                 document.getElementById("otherInfoForm").submit();
-            }else{
+            } else {
                 event.preventDefault();
             }
         }
