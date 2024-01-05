@@ -6,7 +6,7 @@ define('DB_NAME', 'nexus_crypto_db') ;
 
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL Root
-define('URLROOT', 'http://localhost/crip');
+define('URLROOT', 'http://localhost/Nexus-Crypto-Wallet');
 // Site Name
 define('SITENAME', 'crypto_wallet');
 // App Version

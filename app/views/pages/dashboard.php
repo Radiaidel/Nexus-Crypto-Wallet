@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+    <!-- <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script> -->
     <title>Nexus Crypto Wallet</title>
     <style>
         .bg-color {
@@ -28,6 +28,7 @@
                 <h1 class="text-xl ">Nexus Crypto Wallet</h1>
             </div>
             <div class="flex items-center space-x-4">
+                <button id="mysolde">500</button>
                 <a href="#">
                     <svg width="25px" height="25px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -64,69 +65,209 @@
     </header>
 
 
+    <nav class="bg-yellow-400 shadow dark:bg-gray-800 hidden" id="buypop">
+        <div class="w-[95%] bg-white "><button class="float-right" id="closebuy"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512">
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg></button></div>
+        <div class="container flex items-center justify-around w-[70%] p-8 mx-auto text-gray-600 capitalize dark:text-gray-300">
+            <div class="flex flex-col">
+                <div class="text-5xl" id="cryptname"></div>
+                <div class="flex items-center">
+                    <h1 class="text-3xl">total : </h1><br>
+                    <h1 class="text-3xl" id="totaltopay">50</h1>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-5">
+                <h1 class="text-3xl">Quantity : </h1>
+                <div class="flex justify-evenly ">
+                    <button id="minqtn" class="mr-2 bg-gray-200 rounded-xl p-2"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                            <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                        </svg></button>
+                    <h2 id="qnt" class="text-3xl">1</h2>
+                    <button id="addqtn" class="ml-2 bg-gray-200 rounded-xl p-2"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                            <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                        </svg></button>
+                </div>
+                <button id="cfr" class="bg-green-400 rounded-xl p-4 text-white">Confirm</button>
+            </div>
+        </div>
+    </nav>
 
-    <aside id="wallet" class="flex flex-col w-[80%] h-screen fixed top-0 left-[-100%]  bg-slate-800 z-10 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+
+
+    <aside id="wallet" class="flex overflow-auto scrollbar-hide flex-col w-[80%] h-screen fixed top-0 left-[-100%]  bg-slate-800 z-10 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
         <div class="w-[95%] bg-white "><button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512">
                     <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                 </svg></button></div>
 
-        <section class="flex flex-col justify-center h-[50vh] w-[80%]  bg-slate-800 text-gray-600">
+        <section class="flex flex-col justify-center h-[50vh] w-[80%]   bg-slate-800 text-gray-600">
 
-            <div  class="flex flex-col col-span-full xl:col-span-8 bg-slate-800  rounded-sm border border-gray-200">
-                <canvas  id="mychart" width="400" height="300"></canvas>
+            <div class="flex flex-col col-span-full xl:col-span-8 bg-slate-800  rounded-sm border border-gray-200">
+                <canvas id="mychart" width="400" height="300"></canvas>
             </div>
-
-            <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200">
-                <header class="px-5 py-4 border-b border-gray-100 flex items-center">
-                    <h2 class="font-semibold text-gray-800">Analytics</h2>
-                </header>
-                <div class="px-5 py-1">
-                    <div class="flex flex-wrap">
-                        <div class="flex items-center py-2">
-                            <div class="mr-5">
-                                <div class="flex items-center">
-                                    <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
+            <div>
+                <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200 mb-2">
+                    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
+                        <h2 class="font-semibold text-gray-800"></h2>
+                    </header>
+                    <div class="px-5 py-1">
+                        <div class="flex flex-wrap">
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Unique Visitors</div>
                                 </div>
-                                <div class="text-sm text-gray-500">Unique Visitors</div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
                             </div>
-                            <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                        </div>
-                        <!-- Total Pageviews -->
-                        <div class="flex items-center py-2">
-                            <div class="mr-5">
-                                <div class="flex items-center">
-                                    <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
+                            <!-- Total Pageviews -->
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Total Pageviews</div>
                                 </div>
-                                <div class="text-sm text-gray-500">Total Pageviews</div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
                             </div>
-                            <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                        </div>
-                        <!-- Bounce Rate -->
-                        <div class="flex items-center py-2">
-                            <div class="mr-5">
-                                <div class="flex items-center">
-                                    <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
+                            <!-- Bounce Rate -->
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Bounce Rate</div>
                                 </div>
-                                <div class="text-sm text-gray-500">Bounce Rate</div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
                             </div>
-                            <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                        </div>
-                        <!-- Visit Duration-->
-                        <div class="flex items-center">
-                            <div>
-                                <div class="flex items-center">
-                                    <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
+                            <!-- Visit Duration-->
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Visit Duration</div>
                                 </div>
-                                <div class="text-sm text-gray-500">Visit Duration</div>
                             </div>
                         </div>
                     </div>
+                    <div class="flex  justify-between w-[80%]">
+                        <button class="p-4 bg-black-300">Transfer</button>
+                        <button class="p-4 bg-black-300">Sell</button>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200">
+                    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
+                        <h2 class="font-semibold text-gray-800"></h2>
+                    </header>
+                    <div class="px-5 py-1">
+                        <div class="flex flex-wrap">
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Unique Visitors</div>
+                                </div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
+                            </div>
+                            <!-- Total Pageviews -->
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Total Pageviews</div>
+                                </div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
+                            </div>
+                            <!-- Bounce Rate -->
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Bounce Rate</div>
+                                </div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
+                            </div>
+                            <!-- Visit Duration-->
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Visit Duration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  justify-between w-[80%]">
+                        <button class="p-4 bg-black-300">Transfer</button>
+                        <button class="p-4 bg-black-300">Sell</button>
+                    </div>
+                </div>
+
+
+
+                <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200">
+                    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
+                        <h2 class="font-semibold text-gray-800"></h2>
+                    </header>
+                    <div class="px-5 py-1">
+                        <div class="flex flex-wrap">
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Unique Visitors</div>
+                                </div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
+                            </div>
+                            <!-- Total Pageviews -->
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Total Pageviews</div>
+                                </div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
+                            </div>
+                            <!-- Bounce Rate -->
+                            <div class="flex items-center py-2">
+                                <div class="mr-5">
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Bounce Rate</div>
+                                </div>
+                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
+                            </div>
+                            <!-- Visit Duration-->
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="flex items-center">
+                                        <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Visit Duration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  justify-between w-[80%]">
+                        <button class="p-4 bg-black-300">Transfer</button>
+                        <button class="p-4 bg-black-300">Sell</button>
+                    </div>
                 </div>
             </div>
-
         </section>
 
-        <!-- More components -->
+
 
 
         <div class="flex justify-between flex-1">
@@ -135,10 +276,8 @@
     </aside>
 
 
-    <!-- Crypto Table Section -->
     <div class="container mx-auto p-4 text-gray-300 overflow-x-auto">
         <table class="table-auto border border-gray-500 w-full">
-            <!-- Table Header -->
             <thead class="border  p-4 border-gray-500">
                 <tr class="text-center bg-gray-800 text-white">
                     <th></th>
@@ -151,13 +290,13 @@
                     <th class="text-left">Actions</th>
                 </tr>
             </thead>
-            <!-- Table Body (Sample Data) -->
             <tbody id="cryptoinfo" class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
 
 
             </tbody>
         </table>
     </div>
+
 
 
 
@@ -168,84 +307,76 @@
 
 <script>
     let cryptoinfo = document.getElementById('cryptoinfo');
-    // fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-    //         method: 'GET',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
-    //         }
-    //     })
-    //     .then((data) => {
-    //         return data.json()
-    //     })
-    //     .then((parseddata) => {
-    //         console.log(parseddata);
-    //         for (let i = 0; i < parseddata.data.length; i++) {
-    //             cryptoinfo.innerHTML += `
-    //             <tr>
-    //                                 <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
-    //                                     <div>
-    //                                         <h2 class="font-medium text-gray-800 dark:text-white ">${parseddata.data[i].symbol}</h2>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <span class=" w-[100%] bg-green-200"><h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].cmc_rank}</h4></span>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-blue-500"> ${parseddata.data[i].name}</h4>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-gray-700 dark:text-gray-200">$${parseddata.data[i].quote.USD.price}</h4>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.market_cap}</h4>
-    //                                     </div>
-    //                                 </td>
+    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+            }
+        })
+        .then((data) => {
+            return data.json()
+        })
+        .then((parseddata) => {
+            console.log(parseddata);
+            for (let i = 0; i < parseddata.data.length; i++) {
+                cryptoinfo.innerHTML += `
+                <tr>
+                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                        <div>
+                                            <h2 class="font-medium text-gray-800 dark:text-white symbol">${parseddata.data[i].symbol}</h2>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <span class=" w-[100%] bg-green-200"><h4 class="text-gray-700 dark:text-gray-200 rank">${parseddata.data[i].cmc_rank}</h4></span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-blue-500 name"> ${parseddata.data[i].name}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200 price">$${parseddata.data[i].quote.USD.price}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.market_cap}</h4>
+                                        </div>
+                                    </td>
 
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.volume_24h}</h4>
-    //                                     </div>
-    //                                 </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.volume_24h}</h4>
+                                        </div>
+                                    </td>
 
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].circulating_supply}</h4>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <button class="bg-green-500 text-white px-2 py-1 rounded-md buycrypto">Buy</button>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div class='flex items-center'>
-    //                                     <button class="addtofav"><svg class="fav" xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg></button>
-    //                                     </div>
-    //                                 </td>
-    //                             </tr>
-    //             `;
-    //         }
-    //     });
-
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].circulating_supply}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <button class="bg-green-500 text-white px-2 py-1 rounded-md buycrypto">Buy</button>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div class='flex items-center'>
+                                        <button class="addtofav"><svg class="fav" xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                `;
+            }
+            buycrypto();
+        });
     let closewallet = document.getElementById('closewallet');
     let wallet = document.getElementById('wallet');
     let openwallet = document.getElementById('openwallet');
-    let fav = document.querySelectorAll('.fav');
-    let addtofav = document.querySelectorAll('.addtofav');
-    for (let i = 0; i < addtofav.length; i++) {
-        addtofav[i].addEventListener('click', e => {
-            console.log('hello');
-            fav[i].innerHTML = '<path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>';
-        })
-    }
     closewallet.addEventListener('click', e => {
         wallet.style.transition = 'left 0.5s ease';
         wallet.style.left = '-100%';
@@ -253,11 +384,11 @@
     openwallet.addEventListener('click', e => {
         wallet.style.transition = 'left 0.5s ease';
         wallet.style.left = '1%';
-    })  
+    })
 
 
     let mychart = document.getElementById('mychart').getContext('2d');
-    let cryptochart = new Chart (mychart , {
+    let cryptochart = new Chart(mychart, {
         type: 'line',
         data: {
             labels: ['mouad', 'badi', 'ali', 'ahmed'],
@@ -270,4 +401,77 @@
         },
         options: {}
     });
+
+
+    function buycrypto() {
+        const buycrypto = document.querySelectorAll('.buycrypto');
+        let symbol = document.querySelectorAll('.symbol');
+        let name = document.querySelectorAll('.name');
+        let rank = document.querySelectorAll('.rank');
+        let price = document.querySelectorAll('.price');
+        let buypop = document.getElementById('buypop');
+        let closebuy = document.getElementById('closebuy');
+        let mysolde = document.getElementById('mysolde');
+        let cryptname = document.getElementById('cryptname');
+        let totaltopay = document.getElementById('totaltopay');
+        let qnt = document.getElementById('qnt');
+        let minqtn = document.getElementById('minqtn');
+        let addqtn = document.getElementById('addqtn');
+
+        let confirm = document.getElementById('cfr');
+
+        var qntnew = qnt.innerText;
+        addqtn.addEventListener("click", e => {
+            if ((qntnew + 1) * 50 <= parseInt(mysolde.innerText)) {
+                qntnew++;
+                qnt.innerText = qntnew;
+                totaltopay.innerText = qntnew * 50;
+            }
+        });
+        minqtn.addEventListener("click", e => {
+            qntnew--;
+            qnt.innerText = qntnew > 0 ? qntnew : qntnew = 1;
+            totaltopay.innerText = qntnew * 50;
+        })
+        closebuy.addEventListener('click', e => {
+            buypop.classList.add('hidden');
+            buypop.style.transition = 'left 0.5s ease';
+        })
+        var cryptosymbol;
+        var cryptorank;
+        for (let i = 0; i < buycrypto.length; i++) {
+            buycrypto[i].addEventListener('click', e => {
+                var cryptoname = name[i].innerText;
+                cryptosymbol = symbol[i].innerText;
+                cryptorank = rank[i].innerText;
+                var cryptoprice = parseInt(price[i].innerText);
+                cryptname.innerText = cryptoname;
+                buypop.classList.remove('hidden');
+                buypop.style.transition = 'left 0.5s ease';
+            })
+        }
+        confirm.addEventListener('click', e => {
+            buypop.classList.add('hidden');
+            let pricestore = totaltopay.innerText;
+            let namestore = cryptname.innerText;
+            let symbolstore = cryptosymbol;
+            let rankstore = cryptorank;
+
+            var formData = new formData();
+            formData.append('name', namestore);
+            formData.append('symbol', symbolstore);
+            formData.append('rank', rankstore);
+            formData.append('price', pricestore);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '<?php echo URLROOT; ?>users/buycrypto', true);
+            xhr.onload = function() {
+                if (xhr.status == 200 && xhr.readyState == 4) {
+
+                }
+            };
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(new URLSearchParams(formData));
+        })
+    }
 </script>
