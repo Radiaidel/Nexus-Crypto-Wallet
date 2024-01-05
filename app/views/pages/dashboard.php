@@ -22,131 +22,125 @@
     <header class="p-4 text-yellow-300 shadow-md-gray">
         <div class="container mx-auto flex justify-between items-center">
             <div>
-
                 <h1 class="text-xl ">Nexus Crypto Wallet</h1>
             </div>
             <div class="flex items-center space-x-4">
                 <a href="#">
-                    <svg width="25px" height="25px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="25px" height="25px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#000000"
-                            stroke-width="47.104">
-                            <path
-                                d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z"
-                                fill="#fff"></path>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="47.104">
+                            <path d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z" fill="#fff"></path>
                         </g>
                         <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z"
-                                fill="#fff"></path>
+                            <path d="M802.4 967.2c-7.2 0-15.2-1.6-21.6-4.8l-258.4-128.8-252.8 140c-18.4 10.4-41.6 5.6-56-9.6-8.8-9.6-12.8-23.2-11.2-36.8l43.2-285.6L33.6 444C20.8 432 16 414.4 21.6 397.6c4.8-16.8 18.4-28.8 36-31.2l285.6-48L464.8 56c7.2-15.2 22.4-25.6 39.2-26.4 17.6-0.8 33.6 8.8 41.6 24l133.6 256.8 287.2 35.2c17.6 2.4 31.2 13.6 36.8 30.4 5.6 16 1.6 34.4-10.4 46.4L790.4 629.6l55.2 284c2.4 12.8-0.8 26.4-8.8 36.8-8.8 10.4-21.6 16.8-34.4 16.8zM520.8 784.8c7.2 0 15.2 1.6 21.6 4.8l255.2 127.2-54.4-280c-3.2-14.4 1.6-29.6 12-40l200-203.2L672 358.4c-14.4-1.6-28-11.2-34.4-24L506.4 81.6 385.6 340c-6.4 13.6-19.2 23.2-33.6 25.6L70.4 412l208 194.4c11.2 10.4 16 24.8 13.6 40L249.6 928l249.6-137.6c7.2-3.2 14.4-4.8 21.6-5.6z" fill="#fff"></path>
                         </g>
                     </svg>
                 </a>
                 <!-- Wallet Icon -->
                 <button href="#" id="openwallet">
                     <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M20 15C20.5523 15 21 14.5523 21 14C21 13.4477 20.5523 13 20 13C19.4477 13 19 13.4477 19 14C19 14.5523 19.4477 15 20 15Z"
-                            fill="#fce00a" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.775 0.985398C18.4919 0.460783 20.2821 1.55148 20.6033 3.3178L20.9362 5.14896C22.1346 5.54225 23 6.67006 23 8V10.7639C23.6137 11.3132 24 12.1115 24 13V15C24 15.8885 23.6137 16.6868 23 17.2361V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V8C1 6.51309 2.08174 5.27884 3.50118 5.04128L16.775 0.985398ZM21 16C21.5523 16 22 15.5523 22 15V13C22 12.4477 21.5523 12 21 12H18C17.4477 12 17 12.4477 17 13V15C17 15.5523 17.4477 16 18 16H21ZM21 18V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V8C3 7.44772 3.44772 7 4 7H20C20.55 7 20.9962 7.44396 21 7.99303L21 10H18C16.3431 10 15 11.3431 15 13V15C15 16.6569 16.3431 18 18 18H21ZM18.6954 3.60705L18.9412 5H10L17.4232 2.82301C17.9965 2.65104 18.5914 3.01769 18.6954 3.60705Z"
-                            fill="#fff" />
+                        <path d="M20 15C20.5523 15 21 14.5523 21 14C21 13.4477 20.5523 13 20 13C19.4477 13 19 13.4477 19 14C19 14.5523 19.4477 15 20 15Z" fill="#fce00a" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.775 0.985398C18.4919 0.460783 20.2821 1.55148 20.6033 3.3178L20.9362 5.14896C22.1346 5.54225 23 6.67006 23 8V10.7639C23.6137 11.3132 24 12.1115 24 13V15C24 15.8885 23.6137 16.6868 23 17.2361V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V8C1 6.51309 2.08174 5.27884 3.50118 5.04128L16.775 0.985398ZM21 16C21.5523 16 22 15.5523 22 15V13C22 12.4477 21.5523 12 21 12H18C17.4477 12 17 12.4477 17 13V15C17 15.5523 17.4477 16 18 16H21ZM21 18V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V8C3 7.44772 3.44772 7 4 7H20C20.55 7 20.9962 7.44396 21 7.99303L21 10H18C16.3431 10 15 11.3431 15 13V15C15 16.6569 16.3431 18 18 18H21ZM18.6954 3.60705L18.9412 5H10L17.4232 2.82301C17.9965 2.65104 18.5914 3.01769 18.6954 3.60705Z" fill="#fff" />
                     </svg>
                 </button>
 
                 <!-- Notify Icon -->
                 <div class="flex items-center lg:order-2 space-x-5">
-                    <button onclick="notificationHandler(false)">
-                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.713 7.14977C12.1271 7.13953 12.4545 6.79555 12.4443 6.38146C12.434 5.96738 12.0901 5.63999 11.676 5.65023L11.713 7.14977ZM6.30665 12.193H7.05665C7.05665 12.1874 7.05659 12.1818 7.05646 12.1761L6.30665 12.193ZM6.30665 14.51L6.34575 15.259C6.74423 15.2382 7.05665 14.909 7.05665 14.51H6.30665ZM6.30665 17.6L6.26755 18.349C6.28057 18.3497 6.29361 18.35 6.30665 18.35L6.30665 17.6ZM9.41983 18.35C9.83404 18.35 10.1698 18.0142 10.1698 17.6C10.1698 17.1858 9.83404 16.85 9.41983 16.85V18.35ZM10.9445 6.4C10.9445 6.81421 11.2803 7.15 11.6945 7.15C12.1087 7.15 12.4445 6.81421 12.4445 6.4H10.9445ZM12.4445 4C12.4445 3.58579 12.1087 3.25 11.6945 3.25C11.2803 3.25 10.9445 3.58579 10.9445 4H12.4445ZM11.713 5.65023C11.299 5.63999 10.955 5.96738 10.9447 6.38146C10.9345 6.79555 11.2619 7.13953 11.676 7.14977L11.713 5.65023ZM17.0824 12.193L16.3325 12.1761C16.3324 12.1818 16.3324 12.1874 16.3324 12.193H17.0824ZM17.0824 14.51H16.3324C16.3324 14.909 16.6448 15.2382 17.0433 15.259L17.0824 14.51ZM17.0824 17.6V18.35C17.0954 18.35 17.1084 18.3497 17.1215 18.349L17.0824 17.6ZM13.9692 16.85C13.555 16.85 13.2192 17.1858 13.2192 17.6C13.2192 18.0142 13.555 18.35 13.9692 18.35V16.85ZM10.1688 17.6027C10.1703 17.1885 9.83574 16.8515 9.42153 16.85C9.00732 16.8485 8.67034 17.1831 8.66886 17.5973L10.1688 17.6027ZM10.0848 19.3L10.6322 18.7873L10.6309 18.786L10.0848 19.3ZM13.3023 19.3L12.7561 18.786L12.7549 18.7873L13.3023 19.3ZM14.7182 17.5973C14.7167 17.1831 14.3797 16.8485 13.9655 16.85C13.5513 16.8515 13.2167 17.1885 13.2182 17.6027L14.7182 17.5973ZM9.41788 16.85C9.00366 16.85 8.66788 17.1858 8.66788 17.6C8.66788 18.0142 9.00366 18.35 9.41788 18.35V16.85ZM13.9692 18.35C14.3834 18.35 14.7192 18.0142 14.7192 17.6C14.7192 17.1858 14.3834 16.85 13.9692 16.85V18.35ZM11.676 5.65023C8.198 5.73622 5.47765 8.68931 5.55684 12.2099L7.05646 12.1761C6.99506 9.44664 9.09735 7.21444 11.713 7.14977L11.676 5.65023ZM5.55665 12.193V14.51H7.05665V12.193H5.55665ZM6.26755 13.761C5.0505 13.8246 4.125 14.8488 4.125 16.055H5.625C5.625 15.6136 5.95844 15.2792 6.34575 15.259L6.26755 13.761ZM4.125 16.055C4.125 17.2612 5.0505 18.2854 6.26755 18.349L6.34575 16.851C5.95843 16.8308 5.625 16.4964 5.625 16.055H4.125ZM6.30665 18.35H9.41983V16.85H6.30665V18.35ZM12.4445 6.4V4H10.9445V6.4H12.4445ZM11.676 7.14977C14.2917 7.21444 16.3939 9.44664 16.3325 12.1761L17.8322 12.2099C17.9114 8.68931 15.191 5.73622 11.713 5.65023L11.676 7.14977ZM16.3324 12.193V14.51H17.8324V12.193H16.3324ZM17.0433 15.259C17.4306 15.2792 17.764 15.6136 17.764 16.055H19.264C19.264 14.8488 18.3385 13.8246 17.1215 13.761L17.0433 15.259ZM17.764 16.055C17.764 16.4964 17.4306 16.8308 17.0433 16.851L17.1215 18.349C18.3385 18.2854 19.264 17.2612 19.264 16.055H17.764ZM17.0824 16.85H13.9692V18.35H17.0824V16.85ZM8.66886 17.5973C8.66592 18.4207 8.976 19.2162 9.53861 19.814L10.6309 18.786C10.335 18.4715 10.1673 18.0473 10.1688 17.6027L8.66886 17.5973ZM9.53739 19.8127C10.0977 20.4109 10.8758 20.7529 11.6935 20.7529V19.2529C11.2969 19.2529 10.9132 19.0873 10.6322 18.7873L9.53739 19.8127ZM11.6935 20.7529C12.5113 20.7529 13.2894 20.4109 13.8497 19.8127L12.7549 18.7873C12.4739 19.0873 12.0901 19.2529 11.6935 19.2529V20.7529ZM13.8484 19.814C14.4111 19.2162 14.7211 18.4207 14.7182 17.5973L13.2182 17.6027C13.2198 18.0473 13.0521 18.4715 12.7561 18.786L13.8484 19.814ZM9.41788 18.35H13.9692V16.85H9.41788V18.35Z" fill="#fff" />
-                        </svg>                      
-                    </button>
-                
+                    <div>
+                        <form id="NotifyForm" action="<?php echo URLROOT; ?>NotificationController/ShowNotification" method="POST">
+                            <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.713 7.14977C12.1271 7.13953 12.4545 6.79555 12.4443 6.38146C12.434 5.96738 12.0901 5.63999 11.676 5.65023L11.713 7.14977ZM6.30665 12.193H7.05665C7.05665 12.1874 7.05659 12.1818 7.05646 12.1761L6.30665 12.193ZM6.30665 14.51L6.34575 15.259C6.74423 15.2382 7.05665 14.909 7.05665 14.51H6.30665ZM6.30665 17.6L6.26755 18.349C6.28057 18.3497 6.29361 18.35 6.30665 18.35L6.30665 17.6ZM9.41983 18.35C9.83404 18.35 10.1698 18.0142 10.1698 17.6C10.1698 17.1858 9.83404 16.85 9.41983 16.85V18.35ZM10.9445 6.4C10.9445 6.81421 11.2803 7.15 11.6945 7.15C12.1087 7.15 12.4445 6.81421 12.4445 6.4H10.9445ZM12.4445 4C12.4445 3.58579 12.1087 3.25 11.6945 3.25C11.2803 3.25 10.9445 3.58579 10.9445 4H12.4445ZM11.713 5.65023C11.299 5.63999 10.955 5.96738 10.9447 6.38146C10.9345 6.79555 11.2619 7.13953 11.676 7.14977L11.713 5.65023ZM17.0824 12.193L16.3325 12.1761C16.3324 12.1818 16.3324 12.1874 16.3324 12.193H17.0824ZM17.0824 14.51H16.3324C16.3324 14.909 16.6448 15.2382 17.0433 15.259L17.0824 14.51ZM17.0824 17.6V18.35C17.0954 18.35 17.1084 18.3497 17.1215 18.349L17.0824 17.6ZM13.9692 16.85C13.555 16.85 13.2192 17.1858 13.2192 17.6C13.2192 18.0142 13.555 18.35 13.9692 18.35V16.85ZM10.1688 17.6027C10.1703 17.1885 9.83574 16.8515 9.42153 16.85C9.00732 16.8485 8.67034 17.1831 8.66886 17.5973L10.1688 17.6027ZM10.0848 19.3L10.6322 18.7873L10.6309 18.786L10.0848 19.3ZM13.3023 19.3L12.7561 18.786L12.7549 18.7873L13.3023 19.3ZM14.7182 17.5973C14.7167 17.1831 14.3797 16.8485 13.9655 16.85C13.5513 16.8515 13.2167 17.1885 13.2182 17.6027L14.7182 17.5973ZM9.41788 16.85C9.00366 16.85 8.66788 17.1858 8.66788 17.6C8.66788 18.0142 9.00366 18.35 9.41788 18.35V16.85ZM13.9692 18.35C14.3834 18.35 14.7192 18.0142 14.7192 17.6C14.7192 17.1858 14.3834 16.85 13.9692 16.85V18.35ZM11.676 5.65023C8.198 5.73622 5.47765 8.68931 5.55684 12.2099L7.05646 12.1761C6.99506 9.44664 9.09735 7.21444 11.713 7.14977L11.676 5.65023ZM5.55665 12.193V14.51H7.05665V12.193H5.55665ZM6.26755 13.761C5.0505 13.8246 4.125 14.8488 4.125 16.055H5.625C5.625 15.6136 5.95844 15.2792 6.34575 15.259L6.26755 13.761ZM4.125 16.055C4.125 17.2612 5.0505 18.2854 6.26755 18.349L6.34575 16.851C5.95843 16.8308 5.625 16.4964 5.625 16.055H4.125ZM6.30665 18.35H9.41983V16.85H6.30665V18.35ZM12.4445 6.4V4H10.9445V6.4H12.4445ZM11.676 7.14977C14.2917 7.21444 16.3939 9.44664 16.3325 12.1761L17.8322 12.2099C17.9114 8.68931 15.191 5.73622 11.713 5.65023L11.676 7.14977ZM16.3324 12.193V14.51H17.8324V12.193H16.3324ZM17.0433 15.259C17.4306 15.2792 17.764 15.6136 17.764 16.055H19.264C19.264 14.8488 18.3385 13.8246 17.1215 13.761L17.0433 15.259ZM17.764 16.055C17.764 16.4964 17.4306 16.8308 17.0433 16.851L17.1215 18.349C18.3385 18.2854 19.264 17.2612 19.264 16.055H17.764ZM17.0824 16.85H13.9692V18.35H17.0824V16.85ZM8.66886 17.5973C8.66592 18.4207 8.976 19.2162 9.53861 19.814L10.6309 18.786C10.335 18.4715 10.1673 18.0473 10.1688 17.6027L8.66886 17.5973ZM9.53739 19.8127C10.0977 20.4109 10.8758 20.7529 11.6935 20.7529V19.2529C11.2969 19.2529 10.9132 19.0873 10.6322 18.7873L9.53739 19.8127ZM11.6935 20.7529C12.5113 20.7529 13.2894 20.4109 13.8497 19.8127L12.7549 18.7873C12.4739 19.0873 12.0901 19.2529 11.6935 19.2529V20.7529ZM13.8484 19.814C14.4111 19.2162 14.7211 18.4207 14.7182 17.5973L13.2182 17.6027C13.2198 18.0473 13.0521 18.4715 12.7561 18.786L13.8484 19.814ZM9.41788 18.35H13.9692V16.85H9.41788V18.35Z" fill="#fff" />
+                            </svg>
+                            </button>
+                        </form>
+                    </div>
                     <div class="w-full h-full bg-gray-800 bg-opacity-90 top-0 overflow-y-auto overflow-y-hidden sticky-0" id="chec-div">
                         <div class="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700" id="notification">
-                            <div class="2xl:w-4/12 bg-gray-50 h-screen overflow-y-auto p-8 absolute right-0">
+                            <div class="2xl:w-4/12 bg-trensparent h-screen overflow-y-auto py-12 px-5 absolute right-0">
                                 <div class="flex items-center justify-between">
-                                    <p tabindex="0" class="focus:outline-none text-2xl font-semibold leading-6 text-gray-800">Notifications</p>
+                                    <p tabindex="0" class="focus:outline-none text-2xl font-semibold leading-6 text-gray-800"></p>
                                     <button role="button" aria-label="close modal" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 rounded-md cursor-pointer" onclick="notificationHandler(false)">
-                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/notification_1-svg1.svg" alt="icon"/>
+                                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/notification_1-svg1.svg" alt="icon" />
                                     </button>
                                 </div>
-                                <div class="w-full p-3 mt-4 bg-white rounded flex">
-                                    <div tabindex="0" aria-label="post icon" role="img" class="focus:outline-none w-8 h-8 border rounded-full border-gray-200 flex items-center justify-center">
-                                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/notification_1-svg5.svg" alt="icon"/>
-                                    </div>
-                                    <div class="pl-3">
-                                        <p tabindex="0" class="focus:outline-none text-sm leading-none">
-                                            <span class="text-indigo-700">Sarah</span> posted in the thread:
-                                            <span class="text-indigo-700">Update gone wrong</span>
-                                        </p>
-                                        <p tabindex="0" class="focus:outline-none text-xs leading-3 pt-1 text-gray-500">2 hours ago</p>
-                                    </div>
+                                <div class="flex flex-wrap flex-col   w-full p-3 mt-4 bg-transparent rounded ">
+                                    <?php
+                                    foreach ($data['notificationData'] as $notification) {
+                                        $notificationDate = date('M j, Y H:i:s', strtotime($notification['NotificationDate']));
+                                    ?>
+                                        <div class="flex border-b-2 rounded-lg shadow-lg shadow-amber-500 border-blue py-4 px-2 bg-white ">
+                                            <div tabindex="0" role="button" class="focus:outline-none w-8 h-8 border rounded-full border-gray-200 flex items-center justify-center">
+                                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/notification_1-svg5.svg" alt="icon" />
+                                            </div>
+                                            <div class="pl-3">
+                                                <p tabindex="0" class="flex flex-colum focus:outline-none text-sm leading-none">
+                                                    <span class="text-indigo-700"></span> <?= $notification['Message'] ?>
+                                                </p>
+                                                <p tabindex="0" class="focus:outline-none text-xs leading-3 pt-1 text-gray-500">
+                                                    <?= $notificationDate ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
-                                <div class="flex items-center justiyf-between">
-                                    <hr class="w-full" />
-                                    <p tabindex="0" class="focus:outline-none text-sm flex flex-shrink-0 leading-normal px-3 py-16 text-gray-500">Thats it for now :)</p>
-                                    <hr class="w-full" />
-                                </div>
+
                             </div>
                         </div>
-                    </div>
-    
-                    <script>
-                        let notification = document.getElementById("notification");
-                        let checdiv = document.getElementById("chec-div");
-                        let flag3 = false;
-                        const notificationHandler = () => {
-                            if (!flag3) {
-                                notification.classList.add("translate-x-full");
-                                notification.classList.remove("translate-x-0");
-                                setTimeout(function () {
-                                    checdiv.classList.add("hidden");
-                                }, 1000);
-                                flag3 = true;
-                            } else {
-                                setTimeout(function () {
-                                    notification.classList.remove("translate-x-full");
-                                    notification.classList.add("translate-x-0");
-                                }, 1000);
-                                checdiv.classList.remove("hidden");
-                                flag3 = false;
-                            }
-                        };
-                    </script> 
 
+                        <!-- <script>
+                            let notification = document.getElementById("notification");
+                            let checdiv = document.getElementById("chec-div");
+                            let flag3 = false;
+                            const notificationHandler = () => {
+                                if (!flag3) {
+                                    document.getElementById("NotifyForm").submit();
+                                    notification.classList.add("translate-x-full");
+                                    notification.classList.remove("translate-x-0");
+                                    setTimeout(function() {
+                                        checdiv.classList.add("hidden");
+                                    }, 300);
+                                    flag3 = true;
+                                } else {
+                                    setTimeout(function() {
+                                        notification.classList.remove("translate-x-full");
+                                        notification.classList.add("translate-x-0");
+                                    }, 300);
+                                    checdiv.classList.remove("hidden");
+                                    flag3 = false;
+                                    event.preventDefault();
+                                }
+                            };
+                        </script> -->
+
+                    </div>
+
+                    <!-- Logout Icon -->
+                    <a href="#">
+                        <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12L13 12" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18 15L20.913 12.087V12.087C20.961 12.039 20.961 11.961 20.913 11.913V11.913L18 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 5V4.5V4.5C16 3.67157 15.3284 3 14.5 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H14.5C15.3284 21 16 20.3284 16 19.5V19.5V19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
-                <!-- Logout Icon -->
-                <a href="#">
-                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 12L13 12" stroke="#323232" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M18 15L20.913 12.087V12.087C20.961 12.039 20.961 11.961 20.913 11.913V11.913L18 9"
-                            stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M16 5V4.5V4.5C16 3.67157 15.3284 3 14.5 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H14.5C15.3284 21 16 20.3284 16 19.5V19.5V19"
-                            stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </a>
             </div>
-        </div>
     </header>
 
     <!-- Filter Buttons Section -->
     <section class="container mx-auto my-4 p-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Carte Cryptos vedettes -->
-            <div
-                class="group relative text-gray-300 flex flex-col items-stretch gap-2 rounded-xl border border-line px-4 py-2 no-underline transition duration-200 border border-gray-500 ">
+            <div class="group relative text-gray-300 flex flex-col items-stretch gap-2 rounded-xl border border-line px-4 py-2 no-underline transition duration-200 border border-gray-500 ">
 
                 <div class="w-full">
                     <!-- Contenu des cryptos vedettes -->
                     <!-- Exemple : -->
                     <div class="crypto-item cursor-pointer flex items-center justify-between rounded-md p-2 ">
                         <a href="/fr/trade/BNB_USDT?_from=markets" class="flex items-center gap-2">
-                            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC logo"
-                                class="w-6 h-6 rounded-full mr-2">
+                            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC logo" class="w-6 h-6 rounded-full mr-2">
                             <div class="line-clamp-1 truncate">BNB</div>
                         </a>
                         <div class="text-right">
@@ -221,49 +215,49 @@
 </html>
 
 <script>
-    let cryptoinfo = document.getElementById('cryptoinfo');
-    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
-        }
-    })
-        .then((data) => {
-            return data.json()
-        })
-        .then((parseddata) => {
-            console.log(parseddata);
-            for (let i = 0; i < parseddata.data.length; i++) {
-                cryptoinfo.innerHTML += `
-                <tr class="cursor-pointer p-2 border-t border-gray-400">
-                <td class="text-center"><span class="text-yellow-500 text-xl">&#9733;</span></td>
-                <td class="text-left">${parseddata.data[i].cmc_rank}</td>
-                <td class="text-left">
-                    <div class="flex items-center">
-                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC logo"
-                            class="w-6 h-6 rounded-full mr-2">
-                        <div>
-                            <p class="font-medium text-gray-300">${parseddata.data[i].name}</p>
-                            <p class="text-gray-300 text-xs">${parseddata.data[i].symbol}</p>
-                        </div>
-                    </div>
-                </td>
-                <td class="text-left"><a href="/fr/currencies/bitcoin/#markets" class="text-blue-500">$${parseddata.data[i].quote.USD.price}</a>
-                </td>
-                <td class="text-left">${parseddata.data[i].quote.USD.market_cap}</td>
-                <td class="text-left"><a href="/fr/currencies/bitcoin/#markets"
-                        class="text-blue-500">${parseddata.data[i].quote.USD.volume_24h}</a></td>
-                <td class="text-left">
-                    <p>${parseddata.data[i].circulating_supply}</p>
-                </td>
-                <td class="text-left">
-                    <button class="bg-green-500 text-white px-2 py-1 rounded-md">Buy</button>
-                </td>
-                </tr>
-                `;
-            }
-        });
+    // let cryptoinfo = document.getElementById('cryptoinfo');
+    // fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+    //     method: 'GET',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+    //     }
+    // })
+    //     .then((data) => {
+    //         return data.json()
+    //     })
+    //     .then((parseddata) => {
+    //         console.log(parseddata);
+    //         for (let i = 0; i < parseddata.data.length; i++) {
+    //             cryptoinfo.innerHTML += `
+    //             <tr class="cursor-pointer p-2 border-t border-gray-400">
+    //             <td class="text-center"><span class="text-yellow-500 text-xl">&#9733;</span></td>
+    //             <td class="text-left">${parseddata.data[i].cmc_rank}</td>
+    //             <td class="text-left">
+    //                 <div class="flex items-center">
+    //                     <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC logo"
+    //                         class="w-6 h-6 rounded-full mr-2">
+    //                     <div>
+    //                         <p class="font-medium text-gray-300">${parseddata.data[i].name}</p>
+    //                         <p class="text-gray-300 text-xs">${parseddata.data[i].symbol}</p>
+    //                     </div>
+    //                 </div>
+    //             </td>
+    //             <td class="text-left"><a href="/fr/currencies/bitcoin/#markets" class="text-blue-500">$${parseddata.data[i].quote.USD.price}</a>
+    //             </td>
+    //             <td class="text-left">${parseddata.data[i].quote.USD.market_cap}</td>
+    //             <td class="text-left"><a href="/fr/currencies/bitcoin/#markets"
+    //                     class="text-blue-500">${parseddata.data[i].quote.USD.volume_24h}</a></td>
+    //             <td class="text-left">
+    //                 <p>${parseddata.data[i].circulating_supply}</p>
+    //             </td>
+    //             <td class="text-left">
+    //                 <button class="bg-green-500 text-white px-2 py-1 rounded-md">Buy</button>
+    //             </td>
+    //             </tr>
+    //             `;
+    //         }
+    //     });
 
     let closewallet = document.getElementById('closewallet');
     let wallet = document.getElementById('wallet');
