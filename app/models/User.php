@@ -1,11 +1,13 @@
 <?php
+define('USER_VERIFIED', 1);
+require '../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 class User {
     private $db;
-
+    private $verificationCode;
     public function __construct() {
         $this->db = new Database;
     }
@@ -65,32 +67,91 @@ class User {
         return false; // Mot de passe incorrect ou utilisateur inexistant
     }
 
+    public function saveVerificationCode($email, $verificationCode) {
+        $this->db->query('UPDATE users SET verification_code = :verificationCode WHERE Email = :email');
+        $this->db->bind(':verificationCode', $verificationCode);
+        $this->db->bind(':email', $email);
+    
+        return $this->db->execute();
+    }
 
-    public function sendVerificationEmail($email, $token) {
-        // Create a PHPMailer instance (make sure to include PHPMailer in your script)
-        $mail = new PHPMailer(true);
-
+    private function configureMailer(PHPMailer $mail, $email) {
         try {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'k130003188@gmail.com';
-            $mail->Password = 'lcsn hdcs mkia rvgc';
+            $mail->Username = 'nettihadi@gmail.com';
+            $mail->Password = 'pkbj krbe ehft vfmh ';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
-            $mail->setFrom('k130003188@gmail.com', 'Mohammed');
+            $mail->setFrom('nettihadi@gmail.com', 'Nabil Ettihadi');
             $mail->addAddress($email);
-            $mail->Subject = 'Verification Email';
-            $mail->Body = 'Please click the link below to verify your email: <a href="' . URLROOT . '/users/verify/' . $token . '">Verify Email</a>';
             $mail->isHTML(true);
 
-            $mail->send();
             return true;
         } catch (Exception $e) {
             // Handle exceptions (log or display an error message)
             return false;
         }
     }
+    public function sendVerificationEmail($email) {
+        $mail = new PHPMailer(true);
     
+        if ($this->configureMailer($mail, $email)) {
+            try {
+                // Générer un code de vérification
+                $verificationCode = mt_rand(100000, 999999);
+    
+                // Sauvegarder le code dans la base de données
+                $this->saveVerificationCode($email, $verificationCode);
+    
+                // Configurer le courriel
+                $mail->Subject = 'Verification Email';
+                $mail->Body = 'Your verification code is: ' . $verificationCode;
+    
+                // Envoyer le courriel
+                $mail->send();
+    
+                return $verificationCode; // Retourner le code de vérification
+            } catch (Exception $e) {
+                // Handle exceptions (log or display an error message)
+            }
+        }
+    
+        return false;
+    }
+    
+    public function verifyUserByCode($verificationCode) {
+        // Query the database to find the user by verification code
+        $this->db->query('SELECT * FROM users WHERE verification_code = :verificationCode');
+        $this->db->bind(':verificationCode', $verificationCode);
+        
+        // Fetch the result as an associative array
+        $user = $this->db->single(PDO::FETCH_ASSOC);
+        
+        if ($user && $this->isVerificationCodeValid($user, $verificationCode)) {
+            // Update the user's status as verified (optional)
+            $userId = isset($user['id']) ? $user['id'] : null;
+            // $this->updateVerificationStatus($userId);
+        
+            return $user;
+        }
+        
+        return false;
+    }
+   
+    private function isVerificationCodeValid($user, $providedCode) {
+        // Implement any additional validation logic for verification codes here
+        // This could include checking the expiration time or other criteria
+        
+        // For simplicity, this example assumes a direct string match
+        return $user['verification_code'] === $providedCode;
+    }
+    // private function updateVerificationStatus($userId) {
+    //     $this->db->query('UPDATE users SET verified = :status WHERE UserID = :userId');
+    //     $this->db->bind(':status', USER_VERIFIED);
+    //     $this->db->bind(':userId', $userId);
+    //     $this->db->execute();
+    // }
 }

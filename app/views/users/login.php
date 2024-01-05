@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css">
-  <title><?php echo SITENAME; ?></title>
-</head>
-<body>
 
-<div class="row">
-    <div class="col-md-6 mx-auto">
-      <div class="card card-body bg-light mt-5">
-       
-        <h2>Login</h2>
-        <p>Please fill in your credentials to log in</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css">
+    <title><?php echo SITENAME; ?></title>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="w-full sm:w-1/2 lg:w-1/3 px-4 py-8 bg-white shadow-md rounded-lg">
+
+        <h2 class="text-3xl font-semibold mb-6 text-center">Login</h2>
+        <p class="text-gray-600 mb-6 text-center">Please fill in your credentials to log in</p>
+
         <form action="<?php echo URLROOT; ?>/users/login" method="post">
-          <div class="form-group">
-            <label for="Email">Email: <sup>*</sup></label>
-            <input type="email" name="Email" class="form-control form-control-lg <?php echo (!empty($data['Email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['Email']; ?>">
-            <span class="invalid-feedback"><?php echo $data['Email_err']; ?></span>
-          </div>
-          <div class="form-group">
-            <label for="password">Password: <sup>*</sup></label>
-            <input type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
-            <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
-          </div>
-          <div class="row">
-            <div class="col">
-              <input type="submit" value="Login" class="btn btn-success btn-block">
+
+            <div class="mb-4">
+                <label for="Email" class="block text-gray-700 text-sm font-medium mb-2">Email: <sup>*</sup></label>
+                <input type="email" name="Email"
+                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-500 <?php echo (!empty($data['Email_err'])) ? 'border-red-500' : ''; ?>"
+                    value="<?php echo $data['Email']; ?>">
+                <p class="text-red-500 text-xs italic"><?php echo $data['Email_err']; ?></p>
             </div>
-            <div class="col">
-              <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">No account? Register</a>
+
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 text-sm font-medium mb-2">Password: <sup>*</sup></label>
+                <input type="password" name="password"
+                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-500 <?php echo (!empty($data['password_err'])) ? 'border-red-500' : ''; ?>"
+                    value="<?php echo $data['password']; ?>">
+                <p class="text-red-500 text-xs italic"><?php echo $data['password_err']; ?></p>
             </div>
-          </div>
+
+            <div class="flex justify-between items-center mb-6">
+                <button type="submit"
+                    class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none hover:bg-green-700">
+                    Login
+                </button>
+            </div>
+
+            <div class="text-center">
+                <a href="<?php echo URLROOT; ?>/users/register"
+                    class="text-gray-600 text-sm hover:underline">No account? Register</a>
+            </div>
+
         </form>
-      </div>
+
     </div>
-  </div>
-  </div>
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
     <script src="<?php echo URLROOT; ?>/js/main.js"></script>
-  </body>
-  </html>
+</body>
+
+</html>

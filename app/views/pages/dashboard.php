@@ -308,12 +308,12 @@
 <script>
     let cryptoinfo = document.getElementById('cryptoinfo');
     fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
-            }
-        })
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+        }
+    })
         .then((data) => {
             return data.json()
         })
