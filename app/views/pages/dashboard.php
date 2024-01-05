@@ -95,7 +95,7 @@
 
 
 
-    <aside id="wallet" class="flex overflow-auto scrollbar-hide flex-col w-[80%] h-screen fixed top-0 left-[-100%]  bg-slate-800 z-10 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+    <aside id="wallet" class="flex bg-color overflow-auto scrollbar-hide flex-col w-[80%] h-screen fixed top-0 left-[-100%]  bg-slate-800 z-10 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
         <div class="w-[95%] bg-white "><button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512">
                     <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                 </svg></button></div>
@@ -105,165 +105,8 @@
             <div class="flex flex-col col-span-full xl:col-span-8 bg-slate-800  rounded-sm border border-gray-200">
                 <canvas id="mychart" width="400" height="300"></canvas>
             </div>
-            <div>
-                <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200 mb-2">
-                    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
-                        <h2 class="font-semibold text-gray-800"></h2>
-                    </header>
-                    <div class="px-5 py-1">
-                        <div class="flex flex-wrap">
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Unique Visitors</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Total Pageviews -->
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Total Pageviews</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Bounce Rate -->
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Bounce Rate</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Visit Duration-->
-                            <div class="flex items-center">
-                                <div>
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Visit Duration</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex  justify-between w-[80%]">
-                        <button class="p-4 bg-black-300">Transfer</button>
-                        <button class="p-4 bg-black-300">Sell</button>
-                    </div>
-                </div>
+            <div id="cryptohere">
 
-
-                <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200">
-                    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
-                        <h2 class="font-semibold text-gray-800"></h2>
-                    </header>
-                    <div class="px-5 py-1">
-                        <div class="flex flex-wrap">
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Unique Visitors</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Total Pageviews -->
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Total Pageviews</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Bounce Rate -->
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Bounce Rate</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Visit Duration-->
-                            <div class="flex items-center">
-                                <div>
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Visit Duration</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex  justify-between w-[80%]">
-                        <button class="p-4 bg-black-300">Transfer</button>
-                        <button class="p-4 bg-black-300">Sell</button>
-                    </div>
-                </div>
-
-
-
-                <div class="flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200">
-                    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
-                        <h2 class="font-semibold text-gray-800"></h2>
-                    </header>
-                    <div class="px-5 py-1">
-                        <div class="flex flex-wrap">
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">24.7K</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Unique Visitors</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Total Pageviews -->
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">56.9K</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Total Pageviews</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Bounce Rate -->
-                            <div class="flex items-center py-2">
-                                <div class="mr-5">
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">54%</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Bounce Rate</div>
-                                </div>
-                                <div class="hidden md:block w-px h-8 bg-gray-200 mr-5" aria-hidden="true"></div>
-                            </div>
-                            <!-- Visit Duration-->
-                            <div class="flex items-center">
-                                <div>
-                                    <div class="flex items-center">
-                                        <div class="text-3xl font-bold text-gray-800 mr-2">2m 56s</div>
-                                    </div>
-                                    <div class="text-sm text-gray-500">Visit Duration</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex  justify-between w-[80%]">
-                        <button class="p-4 bg-black-300">Transfer</button>
-                        <button class="p-4 bg-black-300">Sell</button>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -308,12 +151,12 @@
 <script>
     let cryptoinfo = document.getElementById('cryptoinfo');
     fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
-        }
-    })
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+            }
+        })
         .then((data) => {
             return data.json()
         })
@@ -373,6 +216,7 @@
                 `;
             }
             buycrypto();
+            walletdisplay();
         });
     let closewallet = document.getElementById('closewallet');
     let wallet = document.getElementById('wallet');
@@ -381,26 +225,13 @@
         wallet.style.transition = 'left 0.5s ease';
         wallet.style.left = '-100%';
     })
-    openwallet.addEventListener('click', e => {
-        wallet.style.transition = 'left 0.5s ease';
-        wallet.style.left = '1%';
-    })
+    openwallet.addEventListener('click', walletOperations);
 
 
-    let mychart = document.getElementById('mychart').getContext('2d');
-    let cryptochart = new Chart(mychart, {
-        type: 'line',
-        data: {
-            labels: ['mouad', 'badi', 'ali', 'ahmed'],
-            datasets: [{
-                label: 'Population',
-                data: [
-                    780, 500, 450, 0
-                ]
-            }]
-        },
-        options: {}
-    });
+
+
+
+
 
 
     function buycrypto() {
@@ -473,5 +304,99 @@
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.send(new URLSearchParams(formData));
         })
+    }
+
+    function walletdisplay() {
+        var labelcoins  = [] ; 
+        var datacoins = [];
+        let walletid = 1;
+        var formData = new FormData();
+        formData.append('walletid', walletid);
+        let cryptohere = document.getElementById('cryptohere');
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '<?php echo URLROOT; ?>/wallets/getAll', true);
+        xhr.onload = function() {
+            if (xhr.status == 200 && xhr.readyState == 4) {
+                let data = JSON.parse(xhr.response);
+                console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                    labelcoins.push(data[i][4]);
+                    datacoins.push(data[i][5]);
+                    cryptohere.innerHTML += `
+                    <div class='flex flex-col col-span-full xl:col-span-8 bg-yellow-400 shadow-lg rounded-sm border border-gray-200 mb-2'>
+                <header class='px-5 py-4 border-b border-gray-100 flex items-center'>
+                    <h2 class='font-semibold text-gray-800'>${data[i][4]}</h2>
+                </header>
+                <div class='px-5 py-1'>
+                    <div class='flex flex-wrap'>
+                        <div class='flex items-center py-2'>
+                            <div class='mr-5'>
+                                <div class='flex items-center'>
+                                    <div class='text-3xl font-bold text-gray-800 mr-2'>${data[i][3]}</div>
+                                </div>
+                                <div class='text-sm text-gray-500'>Quantity</div>
+                            </div>
+                            <div class='hidden md:block w-px h-8 bg-gray-200 mr-5' aria-hidden='true'></div>
+                        </div>
+                        <!-- Total Pageviews -->
+                        <div class='flex items-center py-2'>
+                            <div class='mr-5'>
+                                <div class='flex items-center'>
+                                    <div class='text-3xl font-bold text-gray-800 mr-2'>${data[i][5]}</div>
+                                </div>
+                                <div class='text-sm text-gray-500'>Price</div>
+                            </div>
+                            <div class='hidden md:block w-px h-8 bg-gray-200 mr-5' aria-hidden='true'></div>
+                        </div>
+                        <!-- Bounce Rate -->
+                        <div class='flex items-center py-2'>
+                            <div class='mr-5'>
+                                <div class='flex items-center'>
+                                    <div class='text-3xl font-bold text-gray-800 mr-2'>${data[i][6]}</div>
+                                </div>
+                                <div class='text-sm text-gray-500'>Rank</div>
+                            </div>
+                            <div class='hidden md:block w-px h-8 bg-gray-200 mr-5' aria-hidden='true'></div>
+                        </div>
+                        <div class='flex items-center'>
+                            <div>
+                                <div class='flex items-center'>
+                                    <div class='text-3xl font-bold text-gray-800 mr-2'>${data[i][4]}</div>
+                                </div>
+                                <div class='text-sm text-gray-500'>name</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='flex  justify-between w-[80%]'>
+                   <button class='p-4 bg-black-300'>Sell</button>
+                </div>
+            </div>;
+                    `;
+                }
+            }
+        };
+        console.log(labelcoins);
+        console.log(datacoins);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(new URLSearchParams(formData));
+        let mychart = document.getElementById('mychart').getContext('2d');
+        let cryptochart = new Chart(mychart, {
+            type: 'line',
+            data: {
+                labels: labelcoins,
+                datasets: [{
+                    label: 'Coins',
+                    data: datacoins
+                }]
+            },
+            options: {}
+        });
+    }
+
+    function walletOperations() {
+        wallet.style.transition = 'left 0.5s ease';
+        wallet.style.left = '1%';
+
     }
 </script>
