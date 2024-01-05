@@ -38,7 +38,7 @@
                 <div class="mt-8">
                     <label for="nexusID" class="block text-sm font-medium text-gray-600">NexusID</label>
 
-                    <input type="text" id="nexusID" name="nexusID"
+                    <input type="text" id="nexusID" name="nexusID" required
                         class="mt-1 p-2 block w-full border-b-2 border-yellow-300 focus:outline-none focus:border-yellow-500 bg-gray-100 rounded-md">
                 </div>
 
@@ -85,7 +85,7 @@
 
 
                     <label for="quantity" class="block mt-4 text-sm font-medium text-gray-600">Quantité</label>
-                    <input type="text" id="quantity" name="quantity"
+                    <input type="text" id="quantity" name="quantity"required
                         class="mt-1 p-2 block w-full border-b-2 border-yellow-300 focus:outline-none focus:border-yellow-500 bg-gray-100 rounded-md">
                     <div id="quantityError" class="text-red-500"></div>
                 </div>
