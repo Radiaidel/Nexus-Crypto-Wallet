@@ -69,7 +69,7 @@
 
 
                 <!-- Logout Icon -->
-                <a href="#">
+                <a href="<?php echo URLROOT; ?>/users/logout">
                     <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 12L13 12" stroke="#323232" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -580,76 +580,76 @@
 
 <script>
     let cryptoinfo = document.getElementById('cryptoinfo');
-    // fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-    //     method: 'GET',
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
-    //     }
-    // })
-    //     .then((data) => {
-    //         return data.json()
-    //     })
-    //     .then((parseddata) => {
-    //         console.log(parseddata);
-    //         for (let i = 0; i < parseddata.data.length; i++) {
-    //             cryptoinfo.innerHTML += `
-    //             <tr>
-    //                                 <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
-    //                                     <div>
-    //                                         <h2 class="font-medium text-gray-800 dark:text-white symbol">${parseddata.data[i].symbol}</h2>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <span class=" w-[100%] bg-green-200"><h4 class="text-gray-700 dark:text-gray-200 rank">${parseddata.data[i].cmc_rank}</h4></span>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-blue-500 name"> ${parseddata.data[i].name}</h4>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-gray-700 dark:text-gray-200 price">$${parseddata.data[i].quote.USD.price}</h4>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.market_cap}</h4>
-    //                                     </div>
-    //                                 </td>
+    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+        }
+    })
+        .then((data) => {
+            return data.json()
+        })
+        .then((parseddata) => {
+            console.log(parseddata);
+            for (let i = 0; i < parseddata.data.length; i++) {
+                cryptoinfo.innerHTML += `
+                <tr>
+                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                        <div>
+                                            <h2 class="font-medium text-gray-800 dark:text-white symbol">${parseddata.data[i].symbol}</h2>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <span class=" w-[100%] bg-green-200"><h4 class="text-gray-700 dark:text-gray-200 rank">${parseddata.data[i].cmc_rank}</h4></span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-blue-500 name"> ${parseddata.data[i].name}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200 price">$${parseddata.data[i].quote.USD.price}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.market_cap}</h4>
+                                        </div>
+                                    </td>
 
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.volume_24h}</h4>
-    //                                     </div>
-    //                                 </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-center text-gray-700 dark:text-gray-200">${parseddata.data[i].quote.USD.volume_24h}</h4>
+                                        </div>
+                                    </td>
 
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].circulating_supply}</h4>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div>
-    //                                         <button class="bg-green-500 text-white px-2 py-1 rounded-md buycrypto">Buy</button>
-    //                                     </div>
-    //                                 </td>
-    //                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-    //                                     <div class='flex items-center'>
-    //                                     <button class="addtofav"><svg class="fav" xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg></button>
-    //                                     </div>
-    //                                 </td>
-    //                             </tr>
-    //             `;
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <h4 class="text-gray-700 dark:text-gray-200">${parseddata.data[i].circulating_supply}</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div>
+                                            <button class="bg-green-500 text-white px-2 py-1 rounded-md buycrypto">Buy</button>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                        <div class='flex items-center'>
+                                        <button class="addtofav"><svg class="fav" xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                `;
     cryptoid.push(parseddata.data[i].id);
     nametostore.push(parseddata.data[i].name);
-    //         }
-    //         buycrypto();
+            }
+            buycrypto();
     addtofav();
-    //     });
+        });
     let closewallet = document.getElementById('closewallet');
     let wallet = document.getElementById('wallet');
     let openwallet = document.getElementById('openwallet');
