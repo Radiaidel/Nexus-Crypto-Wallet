@@ -100,13 +100,13 @@ class User {
     
         if ($this->configureMailer($mail, $email)) {
             try {
-                // Générer un code de vérification
+                
                 $verificationCode = mt_rand(100000, 999999);
     
-                // Sauvegarder le code dans la base de données
+              
                 $this->saveVerificationCode($email, $verificationCode);
     
-                // Configurer le courriel
+               
                 $mail->Subject = 'Verification Email';
                 $mail->Body = 'Your verification code is: ' . $verificationCode;
     
@@ -155,8 +155,17 @@ class User {
     //     $this->db->execute();
     // }
     
-    // public function buycrypto(){
-    //     $this->db->query("INSERT INTO wallet_elements()")
-    // }
+    public function buycrypto($quantity , $name , $price , $rank ){
+        // $this->db->query("INSERT INTO crypto(Quantity , Element_name, Element_price,Element_rank) VALUES(:quantity , :name , :price , :rank)");
+
+
+
+        $this->db->query("INSERT INTO wallet_elements(Quantity , Element_name, Element_price,Element_rank) VALUES(:quantity , :name , :price , :rank)");
+        $this->db->bind('quantity', $quantity);
+        $this->db->bind('name', $name);
+        $this->db->bind('price', $price);
+        $this->db->bind('rank', $rank);
+        $this->db->execute();
+    }
 
 }

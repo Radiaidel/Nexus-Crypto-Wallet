@@ -95,29 +95,52 @@
 
 
 
+
     <aside id="wallet" class="flex bg-color overflow-auto scrollbar-hide flex-col w-[80%] h-screen fixed top-0 left-[-100%]  bg-slate-800 z-10 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
-        <div class="w-[95%] bg-white "><button class="float-right" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512">
-                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                </svg></button></div>
+        <div class="w-[95%] bg-white flex flex-col ">
 
-        <section class="flex flex-col justify-center h-[50vh] w-[80%]   bg-slate-800 text-gray-600">
 
-            <div class="flex flex-col col-span-full xl:col-span-8 bg-slate-800  rounded-sm border border-gray-200">
-                <canvas id="mychart" width="400" height="300"></canvas>
+            <div class="flex flex-row justify-between gap-10 items-center ">
+
+
+                <div>
+                    <button id="showModelBtn" class="bg-yellow-500 text-white float-left w-[30%] px-4 py-2 mt-4 mx-auto block rounded-md hover:bg-yellow-600 focus:outline-none">
+                        Transfer
+                    </button>
+                </div>
+                <div>
+                    <button class="float-right w-[30%]" id="closewallet"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="24" viewBox="0 0 384 512">
+                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div id="cryptohere">
+
+
+
+            <section class="flex flex-col justify-center h-[50vh] w-[80%]   bg-slate-800 text-gray-600">
+
+                <div class="flex flex-col col-span-full xl:col-span-8 bg-slate-800  rounded-sm border border-gray-200">
+                    <canvas id="mychart" width="400" height="300"></canvas>
+                </div>
+                <div id="cryptohere">
+
+                </div>
+            </section>
+
+
+
+
+            <div class="flex justify-between flex-1">
 
             </div>
-        </section>
-
-
-
-
-        <div class="flex justify-between flex-1">
-
-        </div>
     </aside>
 
+    <div class="flex mb-4 pb-10 px-8 mx-4 rounded-3xl bg-gray-100 border-4 border-yellow-400">
+        <div class="flex flex-row items-center flex-wrap gap-6" id="latest">
+            
+        </div>
+    </div>
 
     <div class="container mx-auto p-4 text-gray-300 overflow-x-auto">
         <table class="table-auto border border-gray-500 w-full">
@@ -140,7 +163,167 @@
         </table>
     </div>
 
+    <div id="nexusIdModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-md border w-3/5">
+            <!-- Barre de fermeture en haut à droite -->
+            <div class="flex justify-end">
+                <button id="closeNexusIdModalBtn" class="text-gray-500 hover:text-gray-300 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
 
+            <!-- Formulaire pour saisir NexusID -->
+            <form id="nexusIdForm" action="<?php echo URLROOT; ?>/TransactionController/findNexusID" method="POST">
+                <div class="mt-8">
+                    <label for="nexusID" class="block text-sm font-medium text-gray-600">NexusID</label>
+
+                    <input type="text" id="nexusID" name="nexusID" required class="mt-1 p-2 block w-full border-b-2 border-yellow-300 focus:outline-none focus:border-yellow-500 bg-gray-100 rounded-md">
+                </div>
+
+                <!-- Bouton Suivant en bas à droite -->
+                <div class="mt-6 flex justify-end">
+                    <button id="nextBtn" class="px-4 py-2 bg-yellow-500 text-white rounded-xl hover:bg-yellow-600 focus:outline-none">
+                        Suivant
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="otherInfoModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="max-w-md mx-auto p-6 bg-white rounded-md shadow-md w-3/5">
+            <!-- Barre de fermeture en haut à droite -->
+            <div class="flex justify-end">
+                <button id="closeOtherInfoModalBtn" class="text-gray-500 hover:text-gray-300 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Formulaire pour saisir d'autres informations -->
+            <form id="otherInfoForm" action="<?php echo URLROOT; ?>/TransactionController/sendCryptocurrency" method="POST">
+                <div class="mt-4">
+                    <label for="cryptoType" class="block text-sm font-medium text-gray-600">Type de
+                        Cryptomonnaie</label>
+
+                    <select id="cryptoType" name="cryptoType" class="mt-1 p-2 block w-full border-b-2 border-yellow-300 focus:outline-none focus:border-yellow-500 bg-gray-100 rounded-md">
+                        <?php if (isset($data['cryptoData'])) {
+                            foreach ($data['cryptoData'] as $crypto) : ?>
+                                <option value="<?= $crypto['CryptoID']; ?>">
+                                    <?= $crypto['Name']; ?>
+                                </option>
+                        <?php endforeach;
+                        } ?>
+                    </select>
+
+
+                    <label for="quantity" class="block mt-4 text-sm font-medium text-gray-600">Quantité</label>
+                    <input type="text" id="quantity" name="quantity" required class="mt-1 p-2 block w-full border-b-2 border-yellow-300 focus:outline-none focus:border-yellow-500 bg-gray-100 rounded-md">
+                    <div id="quantityError" class="text-red-500"></div>
+                </div>
+
+                <!-- Bouton Envoyer en bas à droite -->
+                <div class="mt-8 flex justify-end">
+                    <button type="submit" id="sendBtn" name="transferBtn" onclick="confirmTransfer()" class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none">
+                        Envoyer
+                    </button>
+                </div>
+            </form>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // Récupérez la quantité initiale de la base de données pour la première crypto
+                    var cryptoData = <?= json_encode($data['cryptoData'], JSON_NUMERIC_CHECK); ?>;
+                    var selectedCryptoIndex = document.getElementById("cryptoType").selectedIndex;
+                    var dbQuantity = cryptoData[selectedCryptoIndex].Quantity;
+
+                    // Ajoutez un gestionnaire d'événements au menu déroulant pour détecter les changements de crypto
+                    var cryptoTypeSelect = document.getElementById("cryptoType");
+                    cryptoTypeSelect.addEventListener("change", function() {
+                        // Récupérez la quantité de la crypto sélectionnée par l'utilisateur
+                        var selectedCryptoIndex = cryptoTypeSelect.selectedIndex;
+                        var selectedCryptoQuantity = cryptoData[selectedCryptoIndex].Quantity;
+
+                        // Mettez à jour dbQuantity avec la nouvelle quantité
+                        dbQuantity = selectedCryptoQuantity;
+
+                        // Réinitialisez le message d'erreur
+                        var errorContainer = document.getElementById("quantityError");
+                        errorContainer.innerHTML = "";
+                    });
+
+                    // Ajoutez un gestionnaire d'événements à l'input de la quantité
+                    var quantityInput = document.getElementById("quantity");
+                    quantityInput.addEventListener("input", function() {
+                        // Récupérez la quantité saisie par l'utilisateur
+                        var userQuantity = parseFloat(quantityInput.value);
+
+                        // Sélectionnez l'élément où afficher le message d'erreur
+                        var errorContainer = document.getElementById("quantityError");
+
+                        // Vérifiez si la quantité saisie est comprise entre 0 et la quantité de la base de données
+                        if (userQuantity <= 0 || userQuantity > dbQuantity) {
+                            document.getElementById("sendBtn").disabled = true;
+                            // Affichez le message d'erreur
+                            errorContainer.innerHTML = "La quantité saisie doit être supérieure à 0 et ne doit pas dépasser " + dbQuantity + ".";
+                        } else {
+                            document.getElementById("sendBtn").disabled = false;
+                            // Effacez le message d'erreur
+                            errorContainer.innerHTML = "";
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+
+    <script>
+        const showModelBtn = document.getElementById('showModelBtn');
+        const closeNexusIdModalBtn = document.getElementById('closeNexusIdModalBtn');
+        const closeOtherInfoModalBtn = document.getElementById('closeOtherInfoModalBtn');
+        const nexusIdModal = document.getElementById('nexusIdModal');
+        const otherInfoModal = document.getElementById('otherInfoModal');
+        const nexusIdForm = document.getElementById('nexusIdForm');
+        const nextBtn = document.getElementById('nextBtn');
+        const otherInfoForm = document.getElementById('otherInfoForm');
+        const sendBtn = document.getElementById('sendBtn');
+
+        showModelBtn.addEventListener('click', () => {
+            nexusIdModal.classList.remove('hidden');
+        });
+
+        // Ajouter un gestionnaire d'événement pour fermer le modèle de NexusID
+        closeNexusIdModalBtn.addEventListener('click', () => {
+            nexusIdModal.classList.add('hidden');
+            nexusIdForm.reset();
+        });
+
+        // Ajouter un gestionnaire d'événement pour fermer le modèle d'autres informations
+        closeOtherInfoModalBtn.addEventListener('click', () => {
+            otherInfoModal.classList.add('hidden');
+            otherInfoForm.reset();
+        });
+
+
+
+
+        function confirmTransfer() {
+            // Afficher une boîte de dialogue de confirmation
+            var confirmation = confirm("Confirmez-vous le transfert ?");
+
+            // Si l'utilisateur clique sur "Oui", soumettre le formulaire
+            if (confirmation) {
+                document.getElementById("otherInfoForm").submit();
+            } else {
+                event.preventDefault();
+            }
+        }
+    </script>
 
 
 </body>
@@ -168,6 +351,7 @@
                                     <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
                                         <div>
                                             <h2 class="font-medium text-gray-800 dark:text-white symbol">${parseddata.data[i].symbol}</h2>
+                                            <span><img src="https://s2.coinmarketcap.com/static/img/coins/128x128/${parseddata.data[i].id}.png" alt="Logo" class="h-8 w-8"></span>
                                         </div>
                                     </td>
                                     <td class="px-4 py-4 text-sm whitespace-nowrap">
@@ -219,6 +403,47 @@
             walletdisplay();
         });
     let closewallet = document.getElementById('closewallet');
+
+    let latest = document.getElementById('latest');
+    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'X-CMC_PRO_API_KEY': '91f64ee6-d1fc-45d7-b894-b9e601f86d91'
+            }
+        })
+        .then((data) => {
+            return data.json()
+        })
+        .then((parseddata) => {
+            for(let i = 0 ; i<4 ; i++){
+                latest.innerHTML+= `
+                <div class="grid grid-cols-4 col-span-4 gap-6 xxl:col-span-9" >
+                <div class="col-span-12 mt-8">
+                    <div class="grid grid-cols-12 gap-6 mt-5">
+                        <a class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white" href="#">
+                            <div class="p-5">
+                                <div class="flex justify-between">
+                              <img src="https://s2.coinmarketcap.com/static/img/coins/128x128/${parseddata.data[i].id}.png" alt="Logo" class="h-8 w-8">
+                                    <div class="bg-green-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
+                                        <span class="flex items-center">$${parseddata.data[i].quote.USD.price}</span>
+                                    </div>
+                                </div>
+                                <div class="ml-2 w-full flex-1">
+                                    <div>
+                                        <div class="mt-3 text-3xl font-bold leading-8">${parseddata.data[i].quote.USD.market_cap}</div>
+
+                                        <div class="mt-1 text-base text-gray-600">${parseddata.data[i].name}s</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+                `;
+            }
+        });
     let wallet = document.getElementById('wallet');
     let openwallet = document.getElementById('openwallet');
     closewallet.addEventListener('click', e => {
@@ -307,9 +532,10 @@
     }
 
     function walletdisplay() {
-        var labelcoins  = [] ; 
+        var labelcoins = [];
         var datacoins = [];
         let walletid = 1;
+        // let walletid = <? echo $_SESSION['id'] ?>;
         var formData = new FormData();
         formData.append('walletid', walletid);
         let cryptohere = document.getElementById('cryptohere');
@@ -396,7 +622,7 @@
 
     function walletOperations() {
         wallet.style.transition = 'left 0.5s ease';
-        wallet.style.left = '1%';
+        wallet.style.left = '0%';
 
     }
 </script>
